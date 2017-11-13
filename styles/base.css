@@ -1,0 +1,4 @@
+/*Base styles include setting heading sizes, default link styles, default font styles, and body backgrounds. There should be no need to use !important in a Base style.*/
+* {
+  border: 1px solid red;
+}
