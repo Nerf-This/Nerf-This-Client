@@ -6,6 +6,7 @@ var __API_URL__ = 'https://owjs.ovh'
 
 let players = [];
 
+//Player constructor function
 function Player(data) {
   console.log('constructor triggered');
   this.profile = data.profile,
@@ -15,7 +16,7 @@ function Player(data) {
   players.push(this);
 }
 
-
+//Create a player
 let loadUser = function () {
   $.get(`${__API_URL__}/all/pc/us/CheshireKat-1372`, function (data) {
     new Player(data);
