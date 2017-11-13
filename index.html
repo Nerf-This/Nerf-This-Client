@@ -2,13 +2,57 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Nerf This</title>
-    <!-- <link rel="stylesheet" href="/style.css"> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Nerf This!</title>
+    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
   </head>
   <body>
-    <h1>Nerf This</h1>
-    <div id="results"></div>
-    <script src="/scripts/models/player.js"></script>
+    <header>
+      <img src="http://placehold.it/60x60">
+      <h1>Nerf This!</h1>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="achievement-comparison">Achievement Comparison</a></li>
+        <li><a href="team-link">Team Link</a></li>
+      </ul>
+    </header>
+    <main>
+      <section class="search container">
+        <form id="battletag">
+          <input type="text" name="battletag" placeholder="Battle Tag">
+        </form>
+      </section>
+      <section class="about container">
+        <ul id="seth-about">
+          <li><img src="http://placehold.it/60x60"></li>
+          <li><h4>Seth Donohue</h4></li>
+          <li><p>About paragraph</p></li>
+          <li><a href="https://github.com/SethDonohue">Seth's GitHub</a></li>
+        </ul>
+        <ul id="kat-about">
+          <li><img src="http://placehold.it/60x60"></li>
+          <li><h4>Kat Cosgrove</h4></li>
+          <li><p>About paragraph</p></li>
+          <li><a href="https://github.com/katcosgrove">Kat's GitHub</a></li>
+        </ul>
+        <ul id="garrett-about">
+          <li><img src="http://placehold.it/60x60"></li>
+          <li><h4>Garrett Johnson</h4></li>
+          <li><p>About paragraph</p></li>
+          <li><a href="https://github.com/wgjbv">Garrett's GitHub</a></li>
+        </ul>
+      </section>
+      <section class="achievement-view container">
+      </section>
+      <section class="team-link container"></section>
+    </main>
+    <footer>2017 Nerf This!</footer>
+    <script src="scripts/models/player.js"></script>
+    <script src="scripts/views/player-view.js"></script>
+    <script src="scripts/views/routes.js"></script>
   </body>
 </html>
