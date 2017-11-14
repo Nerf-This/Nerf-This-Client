@@ -18,18 +18,20 @@ let allPlayers = [];
   Player.loadPlayer = function (platform, region, battletag) {
     console.log(battletag);
     $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data) {
-      allPlayers[0] = new Player(data);
+      allPlayers[0] = new Player(data)
       console.log('inside api call');
-    });
+      // app.playerView.initPlayerPage();
+    }).then(app.playerView.initPlayerPage);
+
   }
   Player.comparePlayer = function (platform, region, battletag) {
     console.log(battletag);
     $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data){
       allPlayers[1] = new Player(data);
       console.log('Inside the compare player API call');
-    })
+    }).then(app.playerView.initComparePage);
   }
-  Player.getPlayer = function () {
+  Player.getPlayer = function (next) {
     $('#primary-tag').on('submit', function(event) {
       event.preventDefault();
       let platform = event.target.platform.value.toLowerCase();
@@ -55,7 +57,6 @@ let allPlayers = [];
 
     return template(this);
   };
-
 
   Player.getPlayer();
   Player.getOpponent();
