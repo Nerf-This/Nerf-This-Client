@@ -23,7 +23,18 @@
     <main>
       <section class="search container">
         <form id="battletag">
-          <input type="text" name="battletag" placeholder="Battle Tag">
+          <select name="platform">
+            <option>PC</option>
+            <option>XBL</option>
+            <option>PSN</option>
+          </select>
+          <select name="region">
+            <option>US</option>
+            <option>EU</option>
+            <option>KR</option>
+          </select>
+          <input name="battletag" type="text" placeholder="Battle Tag">
+          <button type="submit">Search</button>
         </form>
       </section>
       <section class="about container">
