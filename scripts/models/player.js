@@ -4,7 +4,7 @@
 
 var __API_URL__ = 'https://owjs.ovh'
 
-let players = [];
+let allPlayers = [];
 
 //Player constructor function
 function Player(data) {
@@ -13,14 +13,26 @@ function Player(data) {
   this.quickplay = data.quickplay.global,
   this.heroes = data.quickplay.heroes,
   this.achievements = data.achievements
-  players.push(this);
+  allPlayers.push(this);
 }
 
-//Create a player
-let loadUser = function () {
-  $.get(`${__API_URL__}/all/pc/us/CheshireKat-1372`, function (data) {
+//API call for player data
+Player.loadPlayer = function (battletag) {
+  console.log(battletag);
+  $.get(`${__API_URL__}/all/pc/us/${battletag}`, function (data) {
     new Player(data);
+    console.log('inside api call');
   });
 }
 
-loadUser();
+Player.getPlayer = function () {
+  // $('#battletag').off('submit');
+  $('#battletag').on('submit', function(event) {
+    event.preventDefault();
+    let battletag = event.target.battletag.value.split('#').join('-');
+    console.log(battletag);
+    Player.loadPlayer(battletag);
+  })
+}
+
+Player.getPlayer();
