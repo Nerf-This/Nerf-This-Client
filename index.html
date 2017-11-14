@@ -50,7 +50,7 @@
     </header>
     <main>
       <section class="search container">
-        <form id="battletag">
+        <form id="primary-tag">
           <select name="platform">
             <option>PC</option>
             <option>XBL</option>
@@ -62,6 +62,20 @@
             <option>KR</option>
           </select>
           <input name="battletag" type="text" placeholder="Battle Tag">
+          <button type="submit">Search</button>
+        </form>
+        <form id="secondary-tag">
+          <select name="platform">
+            <option>PC</option>
+            <option>XBL</option>
+            <option>PSN</option>
+          </select>
+          <select name="region">
+            <option>US</option>
+            <option>EU</option>
+            <option>KR</option>
+          </select>
+          <input name="battletag" type="text" placeholder="Compare Tag">
           <button type="submit">Search</button>
         </form>
       </section>
