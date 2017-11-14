@@ -40,13 +40,15 @@ var app = app || {};
     //Append Main Player
     $('#player-detail').append(allPlayers[0].toHtml('player'));
     $('.player-view').show();
+    console.log('init player page ran');
   }
 
   playerView.initComparePage = function () {
     // #('hide stuffs').hide();
 
     //Append Main Player
-    $('#compare-detail').append(allPlayers[0].toHtml('compare'));
+    $('#compare-detail').append(allPlayers[1].toHtml('compare'));
+    $('.compare-view').show();
   }
 
   module.playerView = playerView;
