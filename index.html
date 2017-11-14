@@ -9,6 +9,20 @@
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
   <base href=".">
+  <script id="player-view-template" type="text/x-handlebars-template">
+  <li class="player">
+    <img src="{{profile.avatar}}" alt="Small Avatar for {{profile.nick}}">
+    <h3>{{profile.nick}}</h3>
+    <!-- <h4>{{author}}</h4> -->
+  </li>
+  </script>
+  <script id="compare-view-template" type="text/x-handlebars-template">
+    <li class="player">
+      <img src="{{player_img_url}}" alt="Small Avatar for {{playerName}}">
+      <h3>{{playerName}}</h3>
+      <!-- <h4>{{author}}</h4> -->
+    </li>
+  </script>
 </head>
 <body>
   <header>
