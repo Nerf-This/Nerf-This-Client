@@ -25,6 +25,22 @@ var app = app || {};
     $('.achievement-view').show();
   }
 
+
+  //DONE Complete player stats appending
+  playerView.initPlayerPage = function () {
+    // #('hide stuffs').hide();
+
+    //Append Main Player
+    $('#player-detail').append(allPlayers[0].toHtml('player'));
+  }
+
+  playerView.initComparePage = function () {
+    // #('hide stuffs').hide();
+
+    //Append Main Player
+    $('#compare-detail').append(allPlayers[0].toHtml('compare'));
+  }
+
   // playerView.initTeamPage = function() {
   //   reset();
   //   $('.team-link').show();

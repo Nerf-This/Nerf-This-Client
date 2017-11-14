@@ -37,3 +37,10 @@ Player.getPlayer = function () {
 }
 
 Player.getPlayer();
+
+// Templating with Handlebars
+Player.prototype.toHtml = function(type) {
+  let template = Handlebars.compile($(`#${type}-view-template`).text());
+
+  return template(this);
+};
