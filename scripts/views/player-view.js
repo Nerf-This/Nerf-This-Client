@@ -33,6 +33,21 @@ var app = app || {};
     reset();
     $('.team-link').show();
   }
+  //DONE Complete player stats appending
+  playerView.initPlayerPage = function () {
+    // #('hide stuffs').hide();
+
+    //Append Main Player
+    $('#player-detail').append(allPlayers[0].toHtml('player'));
+    $('.player-view').show();
+  }
+
+  playerView.initComparePage = function () {
+    // #('hide stuffs').hide();
+
+    //Append Main Player
+    $('#compare-detail').append(allPlayers[0].toHtml('compare'));
+  }
 
   module.playerView = playerView;
 })(app)

@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <base href=".">
+    <script id="player-view-template" type="text/x-handlebars-template">
+      <li class="player">
+        <img src="{{profile.avatar}}" alt="Small Avatar for {{profile.nick}}">
+        <h3>{{profile.nick}}</h3>
+        <!-- <h4>{{author}}</h4> -->
+      </li>
+    </script>
+    <script id="compare-view-template" type="text/x-handlebars-template">
+      <li class="player">
+        <img src="{{player_img_url}}" alt="Small Avatar for {{playerName}}">
+        <h3>{{playerName}}</h3>
+        <!-- <h4>{{author}}</h4> -->
+      </li>
+    </script>
+
   </head>
   <body>
     <header>
@@ -39,6 +54,14 @@
           <input name="battletag" type="text" placeholder="Battle Tag">
           <button type="submit">Search</button>
         </form>
+      </section>
+      <section class="player-view container">
+        <h2>Player Details</h2>
+        <ul id="player-detail"></ul>
+      </section>
+      <section class="compare-view container">
+        <h2>Comparison Details</h2>
+        <ul id="compare-detail"></ul>
       </section>
       <section class="about container">
         <ul id="seth-about">
