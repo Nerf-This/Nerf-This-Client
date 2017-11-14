@@ -17,21 +17,22 @@ function Player(data) {
 }
 
 //API call for player data
-Player.loadPlayer = function (battletag) {
+Player.loadPlayer = function (platform, region, battletag) {
   console.log(battletag);
-  $.get(`${__API_URL__}/all/pc/us/${battletag}`, function (data) {
+  $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data) {
     new Player(data);
     console.log('inside api call');
   });
 }
 
 Player.getPlayer = function () {
-  // $('#battletag').off('submit');
   $('#battletag').on('submit', function(event) {
     event.preventDefault();
+    let platform = event.target.platform.value.toLowerCase();
+    let region = event.target.region.value.toLowerCase();
     let battletag = event.target.battletag.value.split('#').join('-');
-    console.log(battletag);
-    Player.loadPlayer(battletag);
+    console.log(battletag, region, platform);
+    Player.loadPlayer(platform, region, battletag);
   })
 }
 
