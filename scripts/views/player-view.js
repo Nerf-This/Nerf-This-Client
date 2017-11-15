@@ -40,6 +40,7 @@ var app = app || {};
     //Append Main Player
     $('#player-detail').append(allPlayers[0].toHtml('player'));
     $('.player-view').show();
+    drawChart();
     console.log('init player page ran');
   }
 
