@@ -6,8 +6,7 @@ if (window.location.pathname !== '/') {
 }
 
 page('/', app.playerView.initIndexPage);
-page('/achievement-comparison', app.playerView.initAchievementPage);
+page('/compare', app.playerView.initAchievementPage);
 page('/team-link', app.playerView.initTeamPage);
 page('/about', app.playerView.initAboutPage);
-
 page();

@@ -33,8 +33,6 @@ let secondaryHeroElims = [];
       primaryHeroHours = heroHours(0);
       primaryHeroAcc = heroAccuracy(0);
       primaryHeroElims = heroElims(0);
-      console.log(primaryHeroAcc);
-      console.log(primaryHeroElims);
     })
 
       .then(() => {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)})
@@ -49,8 +47,6 @@ let secondaryHeroElims = [];
       secondaryHeroHours = heroHours(1);
       secondaryHeroAcc = heroAccuracy(1);
       secondaryHeroElims = heroElims(1);
-      console.log(secondaryHeroElims);
-      console.log(secondaryHeroAcc);
     })
       .then(() => {app.playerView.initComparePage(secondaryHeroes, secondaryHeroHours)})
       .then(() => {$('#searchload-opponent').fadeOut(500)});
