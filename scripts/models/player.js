@@ -3,12 +3,14 @@
 var app = app || {};
 var __API_URL__ = 'https://owjs.ovh';
 let allPlayers = [];
-// let primaryHeroes = [];
-// let secondaryHeroes = [];
-// let primaryHeroHours = [];
-// let secondaryHeroHours = [];
+let primaryHeroes = [];
+let secondaryHeroes = [];
+let primaryHeroHours = [];
+let secondaryHeroHours = [];
 
 (function(module) {
+
+
   //Player constructor function
   function Player(data) {
     this.profile = data.profile,
@@ -26,8 +28,12 @@ let allPlayers = [];
       primaryHeroes = Object.keys(allPlayers[0].heroes);
       primaryHeroHours = heroHours(0);
     })
+<<<<<<< HEAD
       .then(app.playerView.initPlayerPage)
       .then($('#searchload-player').fadeOut(500));
+=======
+      .then(() => {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)});
+>>>>>>> 85ac13e2227de07855991e9aff5a725b3d099d53
   }
   //API call for a player to compare against
   Player.comparePlayer = function (platform, region, battletag) {
@@ -37,8 +43,12 @@ let allPlayers = [];
       secondaryHeroes = Object.keys(allPlayers[1].heroes);
       primaryHeroHours = heroHours(1);
     })
+<<<<<<< HEAD
       .then(app.playerView.initComparePage)
       .then($('#searchload-opponent').fadeOut(500));
+=======
+      .then(() => {app.playerView.initComparePage(secondaryHeroes, secondaryHeroHours)});
+>>>>>>> 85ac13e2227de07855991e9aff5a725b3d099d53
   }
   //Getting battletag info from forms
   Player.getPlayer = function () {
