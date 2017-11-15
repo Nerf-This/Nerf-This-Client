@@ -21,7 +21,7 @@ let secondaryHeroHours = [];
 
   //API call for player data
   Player.loadPlayer = function (platform, region, battletag) {
-    console.log(battletag);
+    console.log('Players battletag', battletag);
     $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data) {
       allPlayers[0] = new Player(data);
       primaryHeroes = Object.keys(allPlayers[0].heroes);
@@ -44,6 +44,9 @@ let secondaryHeroHours = [];
       let platform = event.target.platform.value.toLowerCase();
       let region = event.target.region.value.toLowerCase();
       let battletag = event.target.battletag.value.split('#').join('-');
+      localStorage.playerBattletag = battletag;
+      localStorage.playerPlatform = platform;
+      localStorage.playerRegion = region;
       console.log(battletag, region, platform);
       Player.loadPlayer(platform, region, battletag);
     })
@@ -54,6 +57,9 @@ let secondaryHeroHours = [];
       let platform = event.target.platform.value.toLowerCase();
       let region = event.target.region.value.toLowerCase();
       let battletag = event.target.battletag.value.split('#').join('-');
+      localStorage.opponentBattletag = battletag;
+      localStorage.opponentPlatform = platform;
+      localStorage.opponentRegion = region;
       console.log(platform, region, battletag);
       Player.comparePlayer(platform, region, battletag);
     })
