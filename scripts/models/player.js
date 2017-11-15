@@ -3,16 +3,18 @@
 var app = app || {};
 var __API_URL__ = 'https://owjs.ovh';
 let allPlayers = [];
-// let primaryHeroes = [];
-// let primaryHeroHours = [];
+let primaryHeroes = [];
+let primaryHeroHours = [];
 let primaryHeroAcc = [];
 let primaryHeroElims = [];
-// let secondaryHeroes = [];
-// let secondaryHeroHours = [];
+let secondaryHeroes = [];
+let secondaryHeroHours = [];
 let secondaryHeroAcc = [];
 let secondaryHeroElims = [];
 
 (function(module) {
+
+
   //Player constructor function
   function Player(data) {
     this.profile = data.profile,
@@ -34,7 +36,9 @@ let secondaryHeroElims = [];
       console.log(primaryHeroAcc);
       console.log(primaryHeroElims);
     })
-      .then(app.playerView.initPlayerPage);
+
+      .then(() => {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)})
+      .then(() => {$('#searchload-player').fadeOut(500)});
   }
   //API call for a player to compare against
   Player.comparePlayer = function (platform, region, battletag) {
@@ -48,12 +52,14 @@ let secondaryHeroElims = [];
       console.log(secondaryHeroElims);
       console.log(secondaryHeroAcc);
     })
-      .then(app.playerView.initComparePage);
+      .then(() => {app.playerView.initComparePage(secondaryHeroes, secondaryHeroHours)})
+      .then(() => {$('#searchload-opponent').fadeOut(500)});
   }
   //Getting battletag info from forms
   Player.getPlayer = function () {
     $('#primary-tag').on('submit', function(event) {
       event.preventDefault();
+      $('#searchload-player').fadeIn(250);
       let platform = event.target.platform.value.toLowerCase();
       let region = event.target.region.value.toLowerCase();
       let battletag = event.target.battletag.value.split('#').join('-');
@@ -68,6 +74,7 @@ let secondaryHeroElims = [];
   Player.getOpponent = function () {
     $('#secondary-tag').on('submit', function(event){
       event.preventDefault();
+      $('#searchload-opponent').fadeIn(250);
       let platform = event.target.platform.value.toLowerCase();
       let region = event.target.region.value.toLowerCase();
       let battletag = event.target.battletag.value.split('#').join('-');

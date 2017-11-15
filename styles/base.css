@@ -1,4 +1,18 @@
 /*Base styles include setting heading sizes, default link styles, default font styles, and body backgrounds. There should be no need to use !important in a Base style.*/
+@font-face {
+    font-family: 'bignoodle';
+    src: url('fonts/bignoodletoo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'overwatch';
+    src: url('fonts/koverwatch.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
   border: 1px solid red;
   color: white;

@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>Nerf This!</title>
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <base href=".">
     <script id="player-view-template" type="text/x-handlebars-template">
       <li class="player">
@@ -49,9 +49,9 @@
       </nav>
     </header>
     <main>
-      <img id="searchload "src="images/search-load.gif" width="100px" alt="Overwatch Search in Progress Circulating Gif, Yellow Honeycomb over Black">
 
       <section class="search container">
+        <div class="form-controller">
         <form id="primary-tag">
           <select name="platform">
             <option>PC</option>
@@ -66,6 +66,9 @@
           <input name="battletag" type="text" placeholder="Battle Tag">
           <button type="submit">Search</button>
         </form>
+        <img id="searchload-player" class="searchload" src="images/search-load.gif" height="45px" alt="Overwatch Search in Progress Circulating Gif, Yellow Honeycomb over Black">
+      </div>
+      <div class="form-controller">
         <form id="secondary-tag">
           <select name="platform">
             <option>PC</option>
@@ -80,28 +83,26 @@
           <input name="battletag" type="text" placeholder="Compare Tag">
           <button type="submit">Search</button>
         </form>
+          <img id="searchload-opponent" class="searchload" src="images/search-load.gif" height="45px" alt="Overwatch Search in Progress Circulating Gif, Yellow Honeycomb over Black">
+        </div>
       </section>
       <section class="main-start container">
         <div id="player-start" class="stats-choice">
-          <img src="http://via.placeholder.com/250x150" alt="Player Search Image with A Hero Holding a Gun">
-          <h3>Search for Your Battletag Stats Here</h3>
+          <img src="images/arcade.png" alt="Player Search Image with A Hero Holding a Gun">
+          <h3>Search Your Battletag</h3>
         </div>
         <div id="opponent-start" class="stats-choice">
-          <img src="http://via.placeholder.com/250x150" alt="Player Search Image with A Hero Holding a Gun">
-          <h3>Compare an Oppent</h3>
+          <img src="images/comp.png" alt="Player Search Image with A Hero Holding a Gun">
+          <h3>Compare an Opponent</h3>
         </div>
         <div id="team-start" class="stats-choice">
-          <img src="http://via.placeholder.com/250x150" alt="Player Search Image with A Hero Holding a Gun">
-          <h3>Check out your Team</h3>
+          <img src="images/custom.png" alt="Player Search Image with A Hero Holding a Gun">
+          <h3>Check Your Team</h3>
         </div>
         <div id="achievment-start" class="stats-choice">
-          <img src="http://via.placeholder.com/250x150" alt="Player Search Image with A Hero Holding a Gun">
-          <h3>Check out your Achievements</h3>
+          <img src="images/QP.png" alt="Player Search Image with A Hero Holding a Gun">
+          <h3>Check Your Achievements</h3>
         </div>
-        <!-- <div class="player-start">
-          <img src="http://via.placeholder.com/250x150" alt="Player Search Image with A Hero Holding a Gun">
-          <h3>Search for Your Battletag Stats Here</h3>
-        </div> -->
       </section>
       <section class="player-view container">
         <h2>Player Details</h2>
