@@ -43,7 +43,7 @@ form > input, form > select, form > button {
   /*vertical-align: middle;*/
 }
 
-#searchload {
+.searchload {
   /*height: 50px;*/
   margin: 40px 0.25% 40px -3px;
   /*height: 50%;*/

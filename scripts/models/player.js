@@ -28,7 +28,9 @@ let secondaryHeroHours = [];
       primaryHeroes = Object.keys(allPlayers[0].heroes);
       primaryHeroHours = heroHours(0);
     })
-      .then(() => {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)});
+
+      .then(() => {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)})
+      .then(() => {$('#searchload-player').fadeOut(500)});
   }
   //API call for a player to compare against
   Player.comparePlayer = function (platform, region, battletag) {
@@ -38,12 +40,14 @@ let secondaryHeroHours = [];
       secondaryHeroes = Object.keys(allPlayers[1].heroes);
       primaryHeroHours = heroHours(1);
     })
-      .then(() => {app.playerView.initComparePage(secondaryHeroes, secondaryHeroHours)});
+      .then(() => {app.playerView.initComparePage(secondaryHeroes, secondaryHeroHours)})
+      .then(() => {$('#searchload-opponent').fadeOut(500)});
   }
   //Getting battletag info from forms
   Player.getPlayer = function () {
     $('#primary-tag').on('submit', function(event) {
       event.preventDefault();
+      $('#searchload-player').fadeIn(250);
       let platform = event.target.platform.value.toLowerCase();
       let region = event.target.region.value.toLowerCase();
       let battletag = event.target.battletag.value.split('#').join('-');
@@ -58,6 +62,7 @@ let secondaryHeroHours = [];
   Player.getOpponent = function () {
     $('#secondary-tag').on('submit', function(event){
       event.preventDefault();
+      $('#searchload-opponent').fadeIn(250);
       let platform = event.target.platform.value.toLowerCase();
       let region = event.target.region.value.toLowerCase();
       let battletag = event.target.battletag.value.split('#').join('-');

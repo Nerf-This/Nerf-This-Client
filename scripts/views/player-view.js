@@ -10,12 +10,25 @@ var app = app || {};
     $('.container').hide();
     $('navigation').slideDown(350);
   }
-  //TODO: Flesh out initIndexPage
+
+  playerView.initSearchBar = function() {
+    $('.searchload').hide();
+    $('.search').show();
+  }
+
   playerView.initIndexPage = function() {
     console.log('initindexpage triggered');
 
     reset();
-    $('.search').show();
+    // $('.search').show();
+    $('#player-start').on('click', function (event) {
+      console.log('BattleTag Main Search Clicked');
+      event.preventDefault();
+
+      $('.container').hide();
+      playerView.initSearchBar();
+      // playerView.initPlayerPage();
+    })
     $('.main-start').show();
 
     //Check for localStorage, if exists call initPlayerPage
@@ -50,7 +63,6 @@ var app = app || {};
   }
   //DONE Complete player stats appending
   playerView.initPlayerPage = function () {
-    // #('hide stuffs').hide();
 
     //Check for localStorage, if exists
     //Append Main Player
