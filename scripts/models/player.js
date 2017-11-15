@@ -25,7 +25,8 @@ let secondaryHeroHours = [];
     $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data) {
       allPlayers[0] = new Player(data);
       primaryHeroes = Object.keys(allPlayers[0].heroes);
-      primaryHeroHours = heroHours(primaryHeroes, allPlayers[0].heroes);
+      primaryHeroHours = heroHours();
+      console.log(primaryHeroHours);
       console.log('inside api call');
     })
       .then(app.playerView.initPlayerPage);
@@ -62,26 +63,14 @@ let secondaryHeroHours = [];
     })
   }
 
-  //Trying to get an array of hours per hero, using the array of hero names
-  // function heroHours(a, b) {
-  //   console.log('heroHours triggered');
-  //   var time = [];
-  //   for ( var i = 0; i < a.length; i++ ) {
-  //     time.push( b.a[i].time_played );
-  //   }
-  //   console.log(time);
-  //   return time;
-  // }
+  //Getting an array of hours per hero
 
-  function heroHours(array, heroes) {
+  function heroHours() {
     let time = [];
-    for (let i = 0; i < array.length; i++) {
-      if (heroes.hasOwnProperty(array[i])) {
-        heroes.array[i].time_played.push(time);
-      } else {
-        console.log('hit the else, something broke');
-      }
+    for(var key in allPlayers[0].heroes){
+      time.push(allPlayers[0].heroes[key].time_played/3600000)
     }
+    return time;
   }
 
 
