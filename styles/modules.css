@@ -19,6 +19,19 @@ a:hover {
 
 form {
   margin: 30px;
+  width: 50%;
+}
+
+form > input, form > select, form > button {
+  font-size: 150%;
+  color: black;
+}
+
+#searchload {
+  /*position: relative;
+  float: right;*/
+  /*display: inline;*/
+  border: solid 5px red;
 }
 
 /*************************************/
