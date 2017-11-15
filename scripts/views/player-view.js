@@ -83,6 +83,10 @@ var app = app || {};
     $('#compare-detail').append(allPlayers[1].toHtml('compare'));
     $('.compare-view').show();
     drawCompareChart(primaryHeroes, primaryHeroHours, secondaryHeroHours);
+    $('#elims').on('click', function (event) {
+      event.preventDefault();
+      drawCompareChart(primaryHeroes, primaryHeroElims, secondaryHeroElims);
+    })
   }
 
   module.playerView = playerView;

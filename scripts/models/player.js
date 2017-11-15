@@ -38,6 +38,7 @@ let secondaryHeroElims = [];
       .then(() => {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)})
       .then(() => {$('#searchload-player').fadeOut(500)});
   }
+  
   //API call for a player to compare against
   Player.comparePlayer = function (platform, region, battletag) {
     console.log(battletag);
