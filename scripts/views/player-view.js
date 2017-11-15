@@ -83,6 +83,18 @@ var app = app || {};
     $('#compare-detail').append(allPlayers[1].toHtml('compare'));
     $('.compare-view').show();
     drawCompareChart(primaryHeroes, primaryHeroHours, secondaryHeroHours);
+    $('#kd').on('click', function (event) {
+      event.preventDefault();
+      drawCompareChart(primaryHeroes, primaryHeroKD, secondaryHeroKD);
+    })
+    $('#accuracy').on('click', function (event) {
+      event.preventDefault();
+      drawCompareChart(primaryHeroes, primaryHeroAcc, secondaryHeroAcc);
+    })
+    $('#elims').on('click', function (event) {
+      event.preventDefault();
+      drawCompareChart(primaryHeroes, primaryHeroElims, secondaryHeroElims);
+    })
   }
 
   module.playerView = playerView;
