@@ -4,9 +4,13 @@ var app = app || {};
 var __API_URL__ = 'https://owjs.ovh';
 let allPlayers = [];
 // let primaryHeroes = [];
-// let secondaryHeroes = [];
 // let primaryHeroHours = [];
+let primaryHeroAcc = [];
+let primaryHeroElims = [];
+// let secondaryHeroes = [];
 // let secondaryHeroHours = [];
+let secondaryHeroAcc = [];
+let secondaryHeroElims = [];
 
 (function(module) {
   //Player constructor function
@@ -25,6 +29,10 @@ let allPlayers = [];
       allPlayers[0] = new Player(data);
       primaryHeroes = Object.keys(allPlayers[0].heroes);
       primaryHeroHours = heroHours(0);
+      primaryHeroAcc = heroAccuracy(0);
+      primaryHeroElims = heroElims(0);
+      console.log(primaryHeroAcc);
+      console.log(primaryHeroElims);
     })
       .then(app.playerView.initPlayerPage);
   }
@@ -34,7 +42,11 @@ let allPlayers = [];
     $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data){
       allPlayers[1] = new Player(data);
       secondaryHeroes = Object.keys(allPlayers[1].heroes);
-      primaryHeroHours = heroHours(1);
+      secondaryHeroHours = heroHours(1);
+      secondaryHeroAcc = heroAccuracy(1);
+      secondaryHeroElims = heroElims(1);
+      console.log(secondaryHeroElims);
+      console.log(secondaryHeroAcc);
     })
       .then(app.playerView.initComparePage);
   }
@@ -76,7 +88,29 @@ let allPlayers = [];
     return time;
   }
 
+  function heroElims(player) {
+    let elims = [];
+    for(var key in allPlayers[player].heroes){
+      if(!allPlayers[player].heroes[key].eliminations_per_life){
+        elims.push(0);
+      }else{
+        elims.push(allPlayers[player].heroes[key].eliminations_per_life);
+      }
+    }
+    return elims;
+  }
 
+  function heroAccuracy(player) {
+    let acc = [];
+    for(var key in allPlayers[player].heroes){
+      if(!allPlayers[player].heroes[key].weapon_accuracy){
+        acc.push(100);
+      }else{
+        acc.push(allPlayers[player].heroes[key].weapon_accuracy);
+      }
+    }
+    return acc;
+  }
   // Templating with Handlebars
   Player.prototype.toHtml = function(type) {
     let template = Handlebars.compile($(`#${type}-view-template`).text());
