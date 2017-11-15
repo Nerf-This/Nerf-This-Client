@@ -3,15 +3,14 @@
 var app = app || {};
 var __API_URL__ = 'https://owjs.ovh';
 let allPlayers = [];
-let primaryHeroes = [];
-let secondaryHeroes = [];
-let primaryHeroHours = [];
-let secondaryHeroHours = [];
+// let primaryHeroes = [];
+// let secondaryHeroes = [];
+// let primaryHeroHours = [];
+// let secondaryHeroHours = [];
 
 (function(module) {
   //Player constructor function
   function Player(data) {
-    console.log('constructor triggered');
     this.profile = data.profile,
     this.quickplay = data.quickplay.global,
     this.heroes = data.quickplay.heroes,
@@ -19,25 +18,27 @@ let secondaryHeroHours = [];
     this.totalHours = data.quickplay.global.time_played/3600000
   }
 
-  //API call for player data
+  //API call for primary player data
   Player.loadPlayer = function (platform, region, battletag) {
     console.log('Players battletag', battletag);
     $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data) {
       allPlayers[0] = new Player(data);
       primaryHeroes = Object.keys(allPlayers[0].heroes);
-      console.log('inside api call');
+      primaryHeroHours = heroHours(0);
     })
       .then(app.playerView.initPlayerPage);
   }
+  //API call for a player to compare against
   Player.comparePlayer = function (platform, region, battletag) {
     console.log(battletag);
     $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data){
       allPlayers[1] = new Player(data);
       secondaryHeroes = Object.keys(allPlayers[1].heroes);
-      console.log('Inside the compare player API call');
+      primaryHeroHours = heroHours(1);
     })
       .then(app.playerView.initComparePage);
   }
+  //Getting battletag info from forms
   Player.getPlayer = function () {
     $('#primary-tag').on('submit', function(event) {
       event.preventDefault();
@@ -48,6 +49,7 @@ let secondaryHeroHours = [];
       localStorage.playerPlatform = platform;
       localStorage.playerRegion = region;
       console.log(battletag, region, platform);
+
       Player.loadPlayer(platform, region, battletag);
     })
   }
@@ -64,6 +66,17 @@ let secondaryHeroHours = [];
       Player.comparePlayer(platform, region, battletag);
     })
   }
+
+  //Getting an array of hours per hero
+  function heroHours(player) {
+    let time = [];
+    for(var key in allPlayers[player].heroes){
+      time.push(Math.ceil(allPlayers[player].heroes[key].time_played/3600000))
+    }
+    return time;
+  }
+
+
   // Templating with Handlebars
   Player.prototype.toHtml = function(type) {
     let template = Handlebars.compile($(`#${type}-view-template`).text());
