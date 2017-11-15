@@ -1,11 +1,16 @@
 'use strict';
 
+let primaryHeroes = [];
+// let secondaryHeroes = [];
+let primaryHeroHours = [];
+// let secondaryHeroHours = [];
+
 let data = {
   labels: primaryHeroes,
   datasets: [
     {
       label: 'Hours Played',
-      data: primaryHours,
+      data: primaryHeroHours,
       backgroundColor: [
         'rgb(255,18,0)',
         'rgb(232,62,0)',
