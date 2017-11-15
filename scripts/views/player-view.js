@@ -91,9 +91,41 @@ var app = app || {};
       event.preventDefault();
       drawCompareChart(primaryHeroes, primaryHeroAcc, secondaryHeroAcc);
     })
+    $('#damage').on('click', function (event) {
+      event.preventDefault();
+      drawCompareChart(primaryHeroes, primaryDamage, secondaryDamage);
+    })
+    $('#multikill').on('click', function (event) {
+      event.preventDefault();
+      drawCompareChart(primaryHeroes, primaryMulti, secondaryMulti);
+    })
+    $('#off-assists').on('click', function (event) {
+      event.preventDefault();
+      drawCompareChart(primaryHeroes, primaryOffAssist, secondaryOffAssist);
+    })
+    $('#def-assists').on('click', function (event) {
+      event.preventDefault();
+      drawCompareChart(primaryHeroes, primaryDefAssist, secondaryDefAssist);
+    })
     $('#elims').on('click', function (event) {
       event.preventDefault();
       drawCompareChart(primaryHeroes, primaryHeroElims, secondaryHeroElims);
+    })
+    $('#env-kills').on('click', function (event) {
+      event.preventDefault();
+      drawCompareChart(primaryHeroes, primaryEnvKills, secondaryEnvKills);
+    })
+    $('#objective-time').on('click', function (event) {
+      event.preventDefault();
+      drawCompareChart(primaryHeroes, primaryHeroObj, secondaryHeroObj);
+    })
+    $('#healing').on('click', function (event) {
+      event.preventDefault();
+      drawCompareChart(primaryHeroes, primaryHealing, secondaryHealing);
+    })
+    $('#damage-blocked').on('click', function (event) {
+      event.preventDefault();
+      drawCompareChart(primaryHeroes, primaryBlocked, secondaryBlocked);
     })
   }
 

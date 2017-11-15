@@ -10,6 +10,14 @@ let primaryHeroHours = [];
 let primaryHeroAcc = [];
 let primaryHeroKD = [];
 let primaryHeroElims = [];
+let primaryHeroObj = [];
+let primaryHealing = [];
+let primaryDamage = [];
+let primaryOffAssist = [];
+let primaryDefAssist = [];
+let primaryMulti = [];
+let primaryEnvKills = [];
+let primaryBlocked = [];
 
 //Secondary user's chartable stats
 let secondaryHeroes = [];
@@ -17,6 +25,14 @@ let secondaryHeroHours = [];
 let secondaryHeroAcc = [];
 let secondaryHeroKD = [];
 let secondaryHeroElims = [];
+let secondaryHeroObj = [];
+let secondaryHealing = [];
+let secondaryDamage = [];
+let secondaryOffAssist = [];
+let secondaryDefAssist = [];
+let secondaryMulti = [];
+let secondaryEnvKills = [];
+let secondaryBlocked = [];
 
 (function(module) {
 
@@ -40,6 +56,14 @@ let secondaryHeroElims = [];
       primaryHeroAcc = heroAccuracy(0);
       primaryHeroKD = heroKD(0);
       primaryHeroElims = heroElims(0);
+      primaryHeroObj = heroObj(0);
+      primaryHealing = heroHealing(0);
+      primaryDamage = heroDamage(0);
+      primaryOffAssist = heroOffAssist(0);
+      primaryDefAssist = heroDefAssist(0);
+      primaryMulti = heroMulti(0);
+      primaryEnvKills = heroEnvKills(0);
+      primaryBlocked = heroBlocked(0);
     })
 
       .then(() => {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)})
@@ -56,6 +80,14 @@ let secondaryHeroElims = [];
       secondaryHeroAcc = heroAccuracy(1);
       secondaryHeroKD = heroKD(1);
       secondaryHeroElims = heroElims(1);
+      secondaryHeroObj = heroObj(1);
+      secondaryHealing = heroHealing(1);
+      secondaryDamage = heroDamage(1);
+      secondaryOffAssist = heroOffAssist(1);
+      secondaryDefAssist = heroDefAssist(1);
+      secondaryMulti = heroMulti(1);
+      secondaryEnvKills = heroEnvKills(1);
+      secondaryBlocked = heroBlocked(1);
     })
       .then(() => {app.playerView.initComparePage(primaryHeroes, primaryHeroHours, secondaryHeroHours)})
       .then(() => {$('#searchload-opponent').fadeOut(500)});
@@ -132,6 +164,110 @@ let secondaryHeroElims = [];
       elims.push(Math.ceil(allPlayers[player].heroes[key].eliminations_most_in_game))
     }
     return elims;
+  }
+
+  //Getting damage most damage done in a game
+  function heroDamage(player) {
+    let dmg = [];
+    for(var key in allPlayers[player].heroes){
+      if(!allPlayers[player].heroes[key].hero_damage_done_most_in_game){
+        dmg.push(0);
+      }else{
+        dmg.push(allPlayers[player].heroes[key].hero_damage_done_most_in_game);
+      }
+    }
+    return dmg;
+  }
+
+  //Getting highest objective time in game
+  function heroObj(player) {
+    let arr = [];
+    for(var key in allPlayers[player].heroes){
+      if(!allPlayers[player].heroes[key].objective_time_most_in_game){
+        arr.push(0);
+      }else{
+        arr.push(Math.ceil(allPlayers[player].heroes[key].objective_time_most_in_game/3600000));
+      }
+    }
+    return arr;
+  }
+
+  //Getting most healing done in a game
+  function heroHealing(player) {
+    let arr = [];
+    for(var key in allPlayers[player].heroes){
+      if(!allPlayers[player].heroes[key].healing_done_most_in_game){
+        arr.push(0);
+      }else{
+        arr.push(allPlayers[player].heroes[key].healing_done_most_in_game);
+      }
+    }
+    return arr;
+  }
+
+  //Getting offensive assists
+  function heroOffAssist(player) {
+    let arr = [];
+    for(var key in allPlayers[player].heroes){
+      if(!allPlayers[player].heroes[key].offensive_assists_most_in_game){
+        arr.push(0);
+      }else{
+        arr.push(allPlayers[player].heroes[key].offensive_assists_most_in_game);
+      }
+    }
+    return arr;
+  }
+
+  //Getting defensive assists
+  function heroDefAssist(player) {
+    let arr = [];
+    for(var key in allPlayers[player].heroes){
+      if(!allPlayers[player].heroes[key].defensive_assists_most_in_game){
+        arr.push(0);
+      }else{
+        arr.push(allPlayers[player].heroes[key].defensive_assists_most_in_game);
+      }
+    }
+    return arr;
+  }
+
+  //Getting best multikill
+  function heroMulti(player) {
+    let arr = [];
+    for(var key in allPlayers[player].heroes){
+      if(!allPlayers[player].heroes[key].multikill_best){
+        arr.push(0);
+      }else{
+        arr.push(allPlayers[player].heroes[key].multikill_best);
+      }
+    }
+    return arr;
+  }
+
+  //Getting environmental kills
+  function heroEnvKills(player) {
+    let arr = [];
+    for(var key in allPlayers[player].heroes){
+      if(!allPlayers[player].heroes[key].environmental_kills){
+        arr.push(0);
+      }else{
+        arr.push(allPlayers[player].heroes[key].environmental_kills);
+      }
+    }
+    return arr;
+  }
+
+  //Getting damage blocked
+  function heroBlocked(player) {
+    let arr = [];
+    for(var key in allPlayers[player].heroes){
+      if(!allPlayers[player].heroes[key].damage_blocked_most_in_game){
+        arr.push(0);
+      }else{
+        arr.push(allPlayers[player].heroes[key].damage_blocked_most_in_game);
+      }
+    }
+    return arr;
   }
   // Templating with Handlebars
   Player.prototype.toHtml = function(type) {
