@@ -57,7 +57,7 @@ var app = app || {};
     $('#player-detail').empty();
     $('#player-detail').append(allPlayers[0].toHtml('player'));
     $('.player-view').show();
-    drawChart();
+    drawChart(primaryHeroes, primaryHeroHours);
     console.log('init player page ran');
   }
 
