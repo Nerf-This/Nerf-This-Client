@@ -28,12 +28,9 @@ let secondaryHeroHours = [];
       primaryHeroes = Object.keys(allPlayers[0].heroes);
       primaryHeroHours = heroHours(0);
     })
-<<<<<<< HEAD
-      .then(app.playerView.initPlayerPage)
-      .then($('#searchload-player').fadeOut(500));
-=======
+
       .then(() => {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)});
->>>>>>> 85ac13e2227de07855991e9aff5a725b3d099d53
+      .then(() => {$('#searchload-player').fadeOut(500)});
   }
   //API call for a player to compare against
   Player.comparePlayer = function (platform, region, battletag) {
@@ -43,12 +40,8 @@ let secondaryHeroHours = [];
       secondaryHeroes = Object.keys(allPlayers[1].heroes);
       primaryHeroHours = heroHours(1);
     })
-<<<<<<< HEAD
-      .then(app.playerView.initComparePage)
-      .then($('#searchload-opponent').fadeOut(500));
-=======
       .then(() => {app.playerView.initComparePage(secondaryHeroes, secondaryHeroHours)});
->>>>>>> 85ac13e2227de07855991e9aff5a725b3d099d53
+      .then(() => {$('#searchload-opponent').fadeOut(500)});
   }
   //Getting battletag info from forms
   Player.getPlayer = function () {
