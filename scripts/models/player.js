@@ -38,9 +38,9 @@ let secondaryHeroHours = [];
     $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data){
       allPlayers[1] = new Player(data);
       secondaryHeroes = Object.keys(allPlayers[1].heroes);
-      primaryHeroHours = heroHours(1);
+      secondaryHeroHours = heroHours(1);
     })
-      .then(() => {app.playerView.initComparePage(secondaryHeroes, secondaryHeroHours)})
+      .then(() => {app.playerView.initComparePage(primaryHeroes, primaryHeroHours, secondaryHeroHours)})
       .then(() => {$('#searchload-opponent').fadeOut(500)});
   }
   //Getting battletag info from forms
