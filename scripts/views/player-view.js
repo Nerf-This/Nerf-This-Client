@@ -13,8 +13,23 @@ var app = app || {};
   //TODO: Flesh out initIndexPage
   playerView.initIndexPage = function() {
     console.log('initindexpage triggered');
+
     reset();
     $('.search').show();
+    $('GAME MENU').show();
+
+    //Check for localStorage, if exists call initPlayerPage
+    console.log('Check for Local Storage', localStorage.playerBattletag);
+
+    // TODO: MOVE THESE LS FUNCTIONS
+    // if (localStorage.playerBattletag) {
+    //   app.Player.loadPlayer(localStorage.playerPlatform, localStorage.playerRegion, localStorage.playerBattletag);
+    // }
+    //
+    // if (localStorage.opponentBattletag) {
+    //   app.Player.comparePlayer(localStorage.opponentPlatform, localStorage.opponentRegion, localStorage.opponentBattletag);
+    // }
+
   }
   //TODO: Flesh out initAboutPage
   playerView.initAboutPage = function() {
@@ -37,7 +52,9 @@ var app = app || {};
   playerView.initPlayerPage = function () {
     // #('hide stuffs').hide();
 
+    //Check for localStorage, if exists
     //Append Main Player
+    $('#player-detail').empty();
     $('#player-detail').append(allPlayers[0].toHtml('player'));
     $('.player-view').show();
     drawChart();
@@ -48,6 +65,7 @@ var app = app || {};
     // #('hide stuffs').hide();
 
     //Append Main Player
+    $('#compare-detail').empty();
     $('#compare-detail').append(allPlayers[1].toHtml('compare'));
     $('.compare-view').show();
   }
