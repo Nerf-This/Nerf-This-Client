@@ -27,5 +27,6 @@ footer {
 .stats-choice > h3 {
   font-family: 'overwatch';
   font-size: 200%;
+  font-style: italic;
   /*font-weight: bold;*/
 }
