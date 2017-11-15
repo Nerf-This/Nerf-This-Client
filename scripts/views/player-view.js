@@ -16,7 +16,7 @@ var app = app || {};
 
     reset();
     $('.search').show();
-    $('GAME MENU').show();
+    $('.main-start').show();
 
     //Check for localStorage, if exists call initPlayerPage
     console.log('Check for Local Storage', localStorage.playerBattletag);
