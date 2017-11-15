@@ -54,6 +54,7 @@ var app = app || {};
 
     //Check for localStorage, if exists
     //Append Main Player
+    $('#player-detail').empty();
     $('#player-detail').append(allPlayers[0].toHtml('player'));
     $('.player-view').show();
     drawChart();
@@ -64,6 +65,7 @@ var app = app || {};
     // #('hide stuffs').hide();
 
     //Append Main Player
+    $('#compare-detail').empty();
     $('#compare-detail').append(allPlayers[1].toHtml('compare'));
     $('.compare-view').show();
   }
