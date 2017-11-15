@@ -2,3 +2,9 @@
 * {
   border: 1px solid red;
 }
+
+main {
+  background-image: url('../images/oversalted.jpg');
+  height: 900px
+  width: auto;
+}
