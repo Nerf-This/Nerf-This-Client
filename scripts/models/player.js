@@ -3,6 +3,10 @@
 var app = app || {};
 var __API_URL__ = 'https://owjs.ovh';
 let allPlayers = [];
+let primaryHeroes = [];
+let secondaryHeroes = [];
+let primaryHeroHours = [];
+let secondaryHeroHours = [];
 
 (function(module) {
   //Player constructor function
@@ -12,26 +16,29 @@ let allPlayers = [];
     this.quickplay = data.quickplay.global,
     this.heroes = data.quickplay.heroes,
     this.achievements = data.achievements
+    this.totalHours = data.quickplay.global.time_played/3600000
   }
 
   //API call for player data
   Player.loadPlayer = function (platform, region, battletag) {
     console.log('Players battletag', battletag);
     $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data) {
-      allPlayers[0] = new Player(data)
+      allPlayers[0] = new Player(data);
+      primaryHeroes = Object.keys(allPlayers[0].heroes);
       console.log('inside api call');
-      // app.playerView.initPlayerPage();
-    }).then(app.playerView.initPlayerPage);
-
+    })
+      .then(app.playerView.initPlayerPage);
   }
   Player.comparePlayer = function (platform, region, battletag) {
     console.log(battletag);
     $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data){
       allPlayers[1] = new Player(data);
+      secondaryHeroes = Object.keys(allPlayers[1].heroes);
       console.log('Inside the compare player API call');
-    }).then(app.playerView.initComparePage);
+    })
+      .then(app.playerView.initComparePage);
   }
-  Player.getPlayer = function (next) {
+  Player.getPlayer = function () {
     $('#primary-tag').on('submit', function(event) {
       event.preventDefault();
       let platform = event.target.platform.value.toLowerCase();
