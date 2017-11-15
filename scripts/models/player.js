@@ -4,9 +4,9 @@ var app = app || {};
 var __API_URL__ = 'https://owjs.ovh';
 let allPlayers = [];
 let primaryHeroes = [];
-// let secondaryHeroes = [];
+let secondaryHeroes = [];
 let primaryHeroHours = [];
-// let secondaryHeroHours = [];
+let secondaryHeroHours = [];
 
 (function(module) {
 
@@ -28,7 +28,7 @@ let primaryHeroHours = [];
       primaryHeroes = Object.keys(allPlayers[0].heroes);
       primaryHeroHours = heroHours(0);
     })
-      .then(function() {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)});
+      .then(() => {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)});
   }
   //API call for a player to compare against
   Player.comparePlayer = function (platform, region, battletag) {
@@ -38,7 +38,7 @@ let primaryHeroHours = [];
       secondaryHeroes = Object.keys(allPlayers[1].heroes);
       primaryHeroHours = heroHours(1);
     })
-      .then(app.playerView.initComparePage);
+      .then(() => {app.playerView.initComparePage(secondaryHeroes, secondaryHeroHours)});
   }
   //Getting battletag info from forms
   Player.getPlayer = function () {
