@@ -48,7 +48,7 @@ let secondaryHeroElims = [];
       secondaryHeroAcc = heroAccuracy(1);
       secondaryHeroElims = heroElims(1);
     })
-      .then(() => {app.playerView.initComparePage(secondaryHeroes, secondaryHeroHours)})
+      .then(() => {app.playerView.initComparePage(primaryHeroes, primaryHeroHours, secondaryHeroHours)})
       .then(() => {$('#searchload-opponent').fadeOut(500)});
   }
   //Getting battletag info from forms

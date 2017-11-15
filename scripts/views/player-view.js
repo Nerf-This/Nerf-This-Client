@@ -70,17 +70,19 @@ var app = app || {};
     $('#player-detail').empty();
     $('#player-detail').append(allPlayers[0].toHtml('player'));
     $('.player-view').show();
-    drawChart(primaryHeroes, primaryHeroHours);
+    drawSingleChart(primaryHeroes, primaryHeroHours);
     console.log('init player page ran');
   }
 
   playerView.initComparePage = function () {
     // #('hide stuffs').hide();
-
+    // reset();
     //Append Main Player
+    $('#primaryChart').hide();
     $('#compare-detail').empty();
     $('#compare-detail').append(allPlayers[1].toHtml('compare'));
     $('.compare-view').show();
+    drawCompareChart(primaryHeroes, primaryHeroHours, secondaryHeroHours);
   }
 
   module.playerView = playerView;
