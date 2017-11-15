@@ -4,9 +4,13 @@ var app = app || {};
 var __API_URL__ = 'https://owjs.ovh';
 let allPlayers = [];
 let primaryHeroes = [];
-let secondaryHeroes = [];
 let primaryHeroHours = [];
+let primaryHeroAcc = [];
+let primaryHeroElims = [];
+let secondaryHeroes = [];
 let secondaryHeroHours = [];
+let secondaryHeroAcc = [];
+let secondaryHeroElims = [];
 
 (function(module) {
 
@@ -27,6 +31,8 @@ let secondaryHeroHours = [];
       allPlayers[0] = new Player(data);
       primaryHeroes = Object.keys(allPlayers[0].heroes);
       primaryHeroHours = heroHours(0);
+      primaryHeroAcc = heroAccuracy(0);
+      primaryHeroElims = heroElims(0);
     })
 
       .then(() => {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)})
@@ -39,6 +45,8 @@ let secondaryHeroHours = [];
       allPlayers[1] = new Player(data);
       secondaryHeroes = Object.keys(allPlayers[1].heroes);
       secondaryHeroHours = heroHours(1);
+      secondaryHeroAcc = heroAccuracy(1);
+      secondaryHeroElims = heroElims(1);
     })
       .then(() => {app.playerView.initComparePage(primaryHeroes, primaryHeroHours, secondaryHeroHours)})
       .then(() => {$('#searchload-opponent').fadeOut(500)});
@@ -83,7 +91,29 @@ let secondaryHeroHours = [];
     return time;
   }
 
+  function heroElims(player) {
+    let elims = [];
+    for(var key in allPlayers[player].heroes){
+      if(!allPlayers[player].heroes[key].eliminations_per_life){
+        elims.push(0);
+      }else{
+        elims.push(allPlayers[player].heroes[key].eliminations_per_life);
+      }
+    }
+    return elims;
+  }
 
+  function heroAccuracy(player) {
+    let acc = [];
+    for(var key in allPlayers[player].heroes){
+      if(!allPlayers[player].heroes[key].weapon_accuracy){
+        acc.push(100);
+      }else{
+        acc.push(allPlayers[player].heroes[key].weapon_accuracy);
+      }
+    }
+    return acc;
+  }
   // Templating with Handlebars
   Player.prototype.toHtml = function(type) {
     let template = Handlebars.compile($(`#${type}-view-template`).text());

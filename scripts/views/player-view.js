@@ -55,6 +55,7 @@ var app = app || {};
     console.log('initachievementpage triggered');
     reset();
     $('.achievement-view').show();
+    playerView.initSearchBar();
   }
 
   playerView.initTeamPage = function() {
