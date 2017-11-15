@@ -3,13 +3,19 @@
 var app = app || {};
 var __API_URL__ = 'https://owjs.ovh';
 let allPlayers = [];
+
+//Primary user's chartable stats
 let primaryHeroes = [];
 let primaryHeroHours = [];
 let primaryHeroAcc = [];
+let primaryHeroKD = [];
 let primaryHeroElims = [];
+
+//Secondary user's chartable stats
 let secondaryHeroes = [];
 let secondaryHeroHours = [];
 let secondaryHeroAcc = [];
+let secondaryHeroKD = [];
 let secondaryHeroElims = [];
 
 (function(module) {
@@ -32,13 +38,14 @@ let secondaryHeroElims = [];
       primaryHeroes = Object.keys(allPlayers[0].heroes);
       primaryHeroHours = heroHours(0);
       primaryHeroAcc = heroAccuracy(0);
+      primaryHeroKD = heroKD(0);
       primaryHeroElims = heroElims(0);
     })
 
       .then(() => {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)})
       .then(() => {$('#searchload-player').fadeOut(500)});
   }
-  
+
   //API call for a player to compare against
   Player.comparePlayer = function (platform, region, battletag) {
     console.log(battletag);
@@ -47,6 +54,7 @@ let secondaryHeroElims = [];
       secondaryHeroes = Object.keys(allPlayers[1].heroes);
       secondaryHeroHours = heroHours(1);
       secondaryHeroAcc = heroAccuracy(1);
+      secondaryHeroKD = heroKD(1);
       secondaryHeroElims = heroElims(1);
     })
       .then(() => {app.playerView.initComparePage(primaryHeroes, primaryHeroHours, secondaryHeroHours)})
@@ -92,18 +100,20 @@ let secondaryHeroElims = [];
     return time;
   }
 
-  function heroElims(player) {
-    let elims = [];
+  //Getting K/D ratio
+  function heroKD(player) {
+    let kd = [];
     for(var key in allPlayers[player].heroes){
       if(!allPlayers[player].heroes[key].eliminations_per_life){
-        elims.push(0);
+        kd.push(0);
       }else{
-        elims.push(allPlayers[player].heroes[key].eliminations_per_life);
+        kd.push(allPlayers[player].heroes[key].eliminations_per_life);
       }
     }
-    return elims;
+    return kd;
   }
 
+  //Getting hero accuracy
   function heroAccuracy(player) {
     let acc = [];
     for(var key in allPlayers[player].heroes){
@@ -114,6 +124,14 @@ let secondaryHeroElims = [];
       }
     }
     return acc;
+  }
+  //Getting most eliminations in a game
+  function heroElims(player) {
+    let elims = [];
+    for(var key in allPlayers[player].heroes){
+      elims.push(Math.ceil(allPlayers[player].heroes[key].eliminations_most_in_game))
+    }
+    return elims;
   }
   // Templating with Handlebars
   Player.prototype.toHtml = function(type) {
