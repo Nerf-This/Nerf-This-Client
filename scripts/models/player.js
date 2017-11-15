@@ -3,12 +3,14 @@
 var app = app || {};
 var __API_URL__ = 'https://owjs.ovh';
 let allPlayers = [];
-// let primaryHeroes = [];
+let primaryHeroes = [];
 // let secondaryHeroes = [];
-// let primaryHeroHours = [];
+let primaryHeroHours = [];
 // let secondaryHeroHours = [];
 
 (function(module) {
+
+
   //Player constructor function
   function Player(data) {
     this.profile = data.profile,
@@ -26,7 +28,7 @@ let allPlayers = [];
       primaryHeroes = Object.keys(allPlayers[0].heroes);
       primaryHeroHours = heroHours(0);
     })
-      .then(app.playerView.initPlayerPage);
+      .then(function() {app.playerView.initPlayerPage(primaryHeroes, primaryHeroHours)});
   }
   //API call for a player to compare against
   Player.comparePlayer = function (platform, region, battletag) {
