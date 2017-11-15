@@ -142,9 +142,20 @@ a:hover
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
-
+.player-view {
+  font-size: 50px;
+  font-family: 'overwatch';
+  font-style: italic;
+}
+.compare-view {
+  font-size: 50px;
+  font-family: 'overwatch';
+  font-style: italic;
+}
 #menu
 {
+  font-family: 'overwatch';
+  font-style: italic;
   position: absolute;
   width: 180px;
   margin: -100px 0 0 -50px;
