@@ -30,7 +30,6 @@ var app = app || {};
     console.log('initindexpage triggered');
 
     reset();
-    // $('.search').show();
     $('#player-start').on('click', function (event) {
       console.log('BattleTag Main Search Clicked');
       event.preventDefault();
@@ -44,22 +43,13 @@ var app = app || {};
     //Check for localStorage, if exists call initPlayerPage
     console.log('Check for Local Storage', localStorage.playerBattletag);
 
-    // if (localStorage.playerBattletag) {
-    //   app.Player.loadPlayer(localStorage.playerPlatform, localStorage.playerRegion, localStorage.playerBattletag);
-    // }
-    //
-    // if (localStorage.opponentBattletag) {
-    //   app.Player.comparePlayer(localStorage.opponentPlatform, localStorage.opponentRegion, localStorage.opponentBattletag);
-    // }
 
   }
-  //TODO: Flesh out initAboutPage
   playerView.initAboutPage = function() {
     console.log('initaboutpage triggered');
     reset();
     $('.about').show();
   }
-  //TODO: Flesh out initAchievementPage
   playerView.initAchievementPage = function() {
     console.log('initachievementpage triggered');
     reset();
@@ -71,7 +61,6 @@ var app = app || {};
     reset();
     $('.team-link').show();
   }
-  //DONE Complete player stats appending
   playerView.initPlayerPage = function () {
 
     //Append Main Player
