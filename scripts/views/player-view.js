@@ -19,10 +19,13 @@ var app = app || {};
     if (localStorage.playerBattletag) {
       console.log('Local Storage ', localStorage.playerBattletag);
       $('#player-battletag').val(localStorage.playerBattletag);
+      app.Player.loadPlayer(localStorage.playerPlatform,localStorage.playerRegion, localStorage.playerBattletag)
     }
     if (localStorage.opponentBattletag) {
       console.log('Local Storage ', localStorage.opponentBattletag);
       $('#opponent-battletag').val(localStorage.opponentBattletag);
+      // app.Player.comparePlayer(localStorage.opponentPlatform,localStorage.opponentRegion, localStorage.opponentBattletag)
+
     }
   }
 
