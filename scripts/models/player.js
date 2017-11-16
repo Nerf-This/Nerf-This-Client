@@ -1,5 +1,5 @@
 'use strict';
-
+/* eslint-disable */
 var app = app || {};
 var __API_URL__ = 'https://owjs.ovh';
 let allPlayers = [];
