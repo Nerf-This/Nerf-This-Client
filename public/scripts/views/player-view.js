@@ -73,6 +73,7 @@ var app = app || {};
     $('#player-detail').empty();
     $('#player-detail').append(allPlayers[0].toHtml('player'));
     $('.player-view').show();
+    destroyChart();
     drawSingleChart(primaryHeroes, primaryHeroHours);
     console.log('init player page ran');
   }
@@ -122,22 +123,22 @@ var app = app || {};
     })
     $('#env-kills').on('click', function (event) {
       event.preventDefault();
-      $('#compare-detail').empty();
+      destroyChart();
       drawCompareChart(primaryHeroes, primaryEnvKills, secondaryEnvKills);
     })
     $('#objective-time').on('click', function (event) {
       event.preventDefault();
-      $('#compare-detail').empty();
+      destroyChart();
       drawCompareChart(primaryHeroes, primaryHeroObj, secondaryHeroObj);
     })
     $('#healing').on('click', function (event) {
       event.preventDefault();
-      $('#compare-detail').empty();
+      destroyChart();
       drawCompareChart(primaryHeroes, primaryHealing, secondaryHealing);
     })
     $('#damage-blocked').on('click', function (event) {
       event.preventDefault();
-      $('#compare-detail').empty();
+      destroyChart();
       drawCompareChart(primaryHeroes, primaryBlocked, secondaryBlocked);
     })
   }
