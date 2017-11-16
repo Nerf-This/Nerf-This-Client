@@ -75,7 +75,61 @@ var app = app || {};
     $('.player-view').show();
     destroyChart();
     drawSingleChart(primaryHeroes, primaryHeroHours);
-    console.log('init player page ran');
+    $('#kd').on('click', function (event) {
+      event.preventDefault();
+      destroyChart();
+      drawSingleChart(primaryHeroes, primaryHeroKD);
+    })
+    $('#accuracy').on('click', function (event) {
+      event.preventDefault();
+      destroyChart();
+      drawSingleChart(primaryHeroes, primaryHeroAcc);
+    })
+    $('#damage').on('click', function (event) {
+      event.preventDefault();
+      destroyChart();
+      drawSingleChart(primaryHeroes, primaryDamage);
+    })
+    $('#multikill').on('click', function (event) {
+      event.preventDefault();
+      destroyChart();
+      drawSingleChart(primaryHeroes, primaryMulti);
+    })
+    $('#off-assists').on('click', function (event) {
+      event.preventDefault();
+      destroyChart();
+      drawSingleChart(primaryHeroes, primaryOffAssist);
+    })
+    $('#def-assists').on('click', function (event) {
+      event.preventDefault();
+      destroyChart();
+      drawSingleChart(primaryHeroes, primaryDefAssist);
+    })
+    $('#elims').on('click', function (event) {
+      event.preventDefault();
+      destroyChart();
+      drawSingleChart(primaryHeroes, primaryHeroElims);
+    })
+    $('#env-kills').on('click', function (event) {
+      event.preventDefault();
+      destroyChart();
+      drawSingleChart(primaryHeroes, primaryEnvKills);
+    })
+    $('#objective-time').on('click', function (event) {
+      event.preventDefault();
+      destroyChart();
+      drawSingleChart(primaryHeroes, primaryHeroObj);
+    })
+    $('#healing').on('click', function (event) {
+      event.preventDefault();
+      destroyChart();
+      drawSingleChart(primaryHeroes, primaryHealing);
+    })
+    $('#damage-blocked').on('click', function (event) {
+      event.preventDefault();
+      destroyChart();
+      drawSingleChart(primaryHeroes, primaryBlocked);
+    })
   }
 
   playerView.initComparePage = function () {
