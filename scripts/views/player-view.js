@@ -1,5 +1,5 @@
-
 'use strict';
+/* eslint-disable */
 var app = app || {};
 
 (function(module) {
@@ -77,37 +77,37 @@ var app = app || {};
     drawCompareChart(primaryHeroes, primaryHeroHours, secondaryHeroHours);
     $('#kd').on('click', function (event) {
       event.preventDefault();
-      $('#compare-detail').empty();
+      destroyChart();
       drawCompareChart(primaryHeroes, primaryHeroKD, secondaryHeroKD);
     })
     $('#accuracy').on('click', function (event) {
       event.preventDefault();
-      $('#compare-detail').empty();
+      destroyChart();
       drawCompareChart(primaryHeroes, primaryHeroAcc, secondaryHeroAcc);
     })
     $('#damage').on('click', function (event) {
       event.preventDefault();
-      $('#compare-detail').empty();
+      destroyChart();
       drawCompareChart(primaryHeroes, primaryDamage, secondaryDamage);
     })
     $('#multikill').on('click', function (event) {
       event.preventDefault();
-      $('#compare-detail').empty();
+      destroyChart();
       drawCompareChart(primaryHeroes, primaryMulti, secondaryMulti);
     })
     $('#off-assists').on('click', function (event) {
       event.preventDefault();
-      $('#compare-detail').empty();
+      destroyChart();
       drawCompareChart(primaryHeroes, primaryOffAssist, secondaryOffAssist);
     })
     $('#def-assists').on('click', function (event) {
       event.preventDefault();
-      $('#compare-detail').empty();
+      destroyChart();
       drawCompareChart(primaryHeroes, primaryDefAssist, secondaryDefAssist);
     })
     $('#elims').on('click', function (event) {
       event.preventDefault();
-      $('#compare-detail').empty();
+      destroyChart();
       drawCompareChart(primaryHeroes, primaryHeroElims, secondaryHeroElims);
     })
     $('#env-kills').on('click', function (event) {

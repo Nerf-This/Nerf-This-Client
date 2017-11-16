@@ -1,9 +1,9 @@
 'use strict';
 
 //Drawing a chart for a single user's stats
-function drawSingleChart(labels, values) {
+function drawSingleChart(labels, values) { // eslint-disable-line
   var ctx = document.getElementById('primaryChart').getContext('2d');
-  new Chart(ctx,{
+  new Chart(ctx,{ // eslint-disable-line
     type: 'horizontalBar',
     data: {
       labels: labels,
@@ -78,9 +78,9 @@ function drawSingleChart(labels, values) {
 }
 
 //Drawing the comparison charts
-function drawCompareChart(labels, primaryValues, secondaryValues) {
+function drawCompareChart(labels, primaryValues, secondaryValues) { // eslint-disable-line
   var ctx = document.getElementById('compareChart').getContext('2d');
-  new Chart(ctx,{
+  new Chart(ctx,{ // eslint-disable-line
     type: 'bar',
     data: {
       labels: labels,
@@ -201,4 +201,14 @@ function drawCompareChart(labels, primaryValues, secondaryValues) {
       }]
     }
   });
+}
+
+//Destroying the chart every time it needs to be redrawn
+function destroyChart () { // eslint-disable-line
+  $('#compareChart').remove();
+  $('.compare-view').append('<canvas id="compareChart"><canvas>');
+  let canvas = document.querySelector('#compareChart');
+  let ctx = canvas.getContext('2d');
+  ctx.canvas.width = $('#graph').width();
+  ctx.canvas.height = $('#graph').height();
 }
