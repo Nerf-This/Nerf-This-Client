@@ -30,10 +30,21 @@
   margin-bottom: 10%;
 }
 
+#logo {
+  margin-top: -15px;
+  margin-left: 50%;
+}
+
+#logo img {
+  height: 80px;
+}
+
 .form-controller {
+  margin: 0;
   height: 125px;
-  width: 100%;
+  width: 50%;
   max-width: 750px;
+  display: inline-block;
 }
 
 form {
@@ -71,6 +82,27 @@ form > input, form > select, form > button {
 #compare-detail {
   float:right;
   margin-right: 3%;
+}
+
+.player-view {
+  font-size: 50px;
+  font-family: 'overwatch';
+  font-style: italic;
+  display: block;
+}
+.compare-view {
+  font-size: 50px;
+  font-family: 'overwatch';
+  font-style: italic;
+}
+
+.primary {
+  float: left;
+}
+
+#compare-player-button {
+  height: 45px;
+  margin: 40px;
 }
 
 canvas {
