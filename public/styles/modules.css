@@ -8,14 +8,10 @@ a:hover {
   color: white;
 }
 
-#logo {
-  margin-top: -15px;
-  margin-left: 50%;
-}
-
-#logo img {
-  height: 80px;
-}
+/*#logo {
+  text-align: center;
+  font-size: 4vw;
+}*/
 
 .form-controller {
   height: 125px;
