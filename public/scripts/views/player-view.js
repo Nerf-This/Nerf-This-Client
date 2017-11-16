@@ -38,8 +38,18 @@ var app = app || {};
 
       $('.container').hide();
       playerView.initSearchBar();
+      $('#secondary-tag').hide();
+
+      $('#compare-player-button').on('click', function (event) {
+        $('#secondary-tag').show();
+        $('#compare-player-button').hide();
+
+      })
+
     })
     $('.main-start').show();
+
+
   }
   playerView.initAboutPage = function() {
     console.log('initaboutpage triggered');
