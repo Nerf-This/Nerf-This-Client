@@ -13,14 +13,12 @@
     <li class="player">
       <img src="{{profile.avatar}}" alt="Small Avatar for {{profile.nick}}">
       <h3>{{profile.nick}}</h3>
-      <!-- <h4>{{author}}</h4> -->
     </li>
   </script>
   <script id="compare-view-template" type="text/x-handlebars-template">
     <li class="player">
       <img src="{{profile.avatar}}" alt="Small Avatar for {{profile.nick}}">
       <h3>{{profile.nick}}</h3>
-      <!-- <h4>{{author}}</h4> -->
     </li>
   </script>
 
@@ -36,8 +34,6 @@
         <ul id="menu">
           <li><a href="">Home</a></li>
           <li><a href="about">About</a></li>
-          <li><a href="compare">Compare</a></li>
-          <li><a href="team-link">Team Link</a></li>
         </ul>
       </div>
       <div id="logo">
@@ -86,30 +82,32 @@
         <img id="searchload-opponent" class="searchload" src="images/search-load.gif" height="45px" alt="Overwatch Search in Progress Circulating Gif, Yellow Honeycomb over Black">
       </div>
     </section>
+
     <section class="main-start container">
       <div id="player-start" class="stats-choice">
-        <img src="images/arcade.png" alt="Player Search Image with A Hero Holding a Gun">
+        <img src="images/arcade.jpg" alt="Player Search Image with A Hero Holding a Gun">
         <h3>Search Your Battletag</h3>
       </div>
+
       <div id="opponent-start" class="stats-choice">
-        <img src="images/comp.png" alt="Player Search Image with A Hero Holding a Gun">
+        <img src="images/custom.jpg" alt="Player Search Image with A Hero Holding a Gun">
         <h3>Compare an Opponent</h3>
       </div>
-      <!-- <div id="team-start" class="stats-choice">
-        <img src="images/custom.png" alt="Player Search Image with A Hero Holding a Gun">
-        <h3>Check Your Team</h3>
-      </div> -->
+
       <div id="achievment-start" class="stats-choice">
-        <img src="images/QP.png" alt="Player Search Image with A Hero Holding a Gun">
+        <img src="images/QP.jpg" alt="Player Search Image with A Hero Holding a Gun">
         <h3>Check Your Achievements</h3>
       </div>
     </section>
+
     <section class="player-view container">
       <ul id="player-detail"></ul>
       <canvas id="primaryChart" width="960px" height="500px"></canvas>
     </section>
+
     <section class="compare-view container">
       <h2>Comparison Details</h2>
+      <ul id="compare-detail"></ul>
       <ul id="stat-buttons">
         <li><button id="elims" type="submit">Eliminations</button></li>
         <li><button id="kd" type="submit">K/D Ratio</button></li>
@@ -123,9 +121,9 @@
         <li><button id="healing" type="submit">Healing</button></li>
         <li><button id="damage-blocked" type="submit">Damage Blocked</button></li>
       </ul>
-      <ul id="compare-detail"></ul>
         <canvas id="compareChart" width="700px" height="400px"></canvas>
     </section>
+
     <section class="about container">
       <ul id="seth-about">
         <li><img src="http://placehold.it/60x60"></li>
@@ -150,14 +148,14 @@
       <p>Team Link is not hidden</p>
     </section>
   </main>
-  <footer>2017 Nerf This!</footer>
+  <!-- <footer>2017 Nerf This!</footer> -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
   <script src="scripts/models/player.js"></script>
   <script src="scripts/views/player-view.js"></script>
-  <script src="scripts/views/routes.js"></script>
+  <script src="scripts/controllers/routes.js"></script>
   <script src="scripts/views/charts.js"></script>
 </body>
 </html>

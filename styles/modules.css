@@ -42,6 +42,20 @@ form > input, form > select, form > button {
   display: inline-block;
 }
 
+#stat-buttons li {
+  display: inline-block;
+}
+
+#player-detail {
+  float: left;
+  margin-left: 3%;
+}
+
+#compare-detail {
+  float:right;
+  margin-right: 3%;
+}
+
 /*************************************/
 /*Everything below is driving the menu*/
 /*************************************/
