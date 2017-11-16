@@ -8,6 +8,15 @@ a:hover {
   color: white;
 }
 
+#logo {
+  margin-top: -15px;
+  margin-left: 50%;
+}
+
+#logo img {
+  height: 80px;
+}
+
 .form-controller {
   margin: 0;
   height: 125px;
