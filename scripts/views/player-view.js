@@ -19,6 +19,7 @@ var app = app || {};
     if (localStorage.playerBattletag) {
       console.log('Local Storage ', localStorage.playerBattletag);
       $('#player-battletag').val(localStorage.playerBattletag);
+      $('#searchload-player').fadeIn(250);
       app.Player.loadPlayer(localStorage.playerPlatform,localStorage.playerRegion, localStorage.playerBattletag)
     }
     if (localStorage.opponentBattletag) {
