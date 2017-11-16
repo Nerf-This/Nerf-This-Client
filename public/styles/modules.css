@@ -47,6 +47,11 @@ form > input, form > select, form > button {
   margin-right: 3%;
 }
 
+#compare-player-button {
+    height: 45px;
+    margin: 40px;
+}
+
 /*************************************/
 /*Everything below is driving the menu*/
 /*************************************/
