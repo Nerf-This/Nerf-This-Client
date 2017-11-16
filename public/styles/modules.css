@@ -18,9 +18,11 @@ a:hover {
 }
 
 .form-controller {
+  margin: 0;
   height: 125px;
-  width: 100%;
+  width: 50%;
   max-width: 750px;
+  display: inline-block;
 }
 
 form {
@@ -54,6 +56,34 @@ form > input, form > select, form > button {
 #compare-detail {
   float:right;
   margin-right: 3%;
+}
+
+.player-view {
+  font-size: 50px;
+  font-family: 'overwatch';
+  font-style: italic;
+  display: block;
+}
+.compare-view {
+  font-size: 50px;
+  font-family: 'overwatch';
+  font-style: italic;
+}
+
+.primary {
+  float: left;
+}
+
+.secondary {
+  /*display: inline-block;*/
+  /*float: right;*/
+  /*clear: right;*/
+}
+
+#compare-player-button {
+  height: 45px;
+  margin: 40px;
+
 }
 
 /*************************************/
@@ -141,16 +171,7 @@ a:hover
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
-.player-view {
-  font-size: 50px;
-  font-family: 'overwatch';
-  font-style: italic;
-}
-.compare-view {
-  font-size: 50px;
-  font-family: 'overwatch';
-  font-style: italic;
-}
+
 #menu
 {
   font-family: 'overwatch';
