@@ -24,8 +24,6 @@ var app = app || {};
     if (localStorage.opponentBattletag) {
       console.log('Local Storage ', localStorage.opponentBattletag);
       $('#opponent-battletag').val(localStorage.opponentBattletag);
-      // app.Player.comparePlayer(localStorage.opponentPlatform,localStorage.opponentRegion, localStorage.opponentBattletag)
-
     }
   }
 
@@ -39,14 +37,8 @@ var app = app || {};
 
       $('.container').hide();
       playerView.initSearchBar();
-      // playerView.initPlayerPage();
     })
     $('.main-start').show();
-
-    //Check for localStorage, if exists call initPlayerPage
-    console.log('Check for Local Storage', localStorage.playerBattletag);
-
-
   }
   playerView.initAboutPage = function() {
     console.log('initaboutpage triggered');
