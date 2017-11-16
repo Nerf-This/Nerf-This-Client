@@ -9,9 +9,11 @@ a:hover {
 }
 
 .form-controller {
+  margin: 0;
   height: 125px;
-  width: 100%;
+  width: 50%;
   max-width: 750px;
+  display: inline-block;
 }
 
 form {
@@ -45,6 +47,16 @@ form > input, form > select, form > button {
 #compare-detail {
   float:right;
   margin-right: 3%;
+}
+
+.primary {
+  float: left;
+}
+
+.secondary {
+  /*display: inline-block;*/
+  /*float: right;*/
+  /*clear: right;*/
 }
 
 #compare-player-button {
