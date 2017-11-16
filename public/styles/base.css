@@ -20,3 +20,15 @@
 body {
   background-image: url('../images/lijiangblur.png')
 }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+p {
+  font-size: 3vh;
+}
