@@ -185,7 +185,7 @@ function drawCompareChart(labels, primaryValues, secondaryValues) {
         }]
     },
     options: {
-      responsive: false,
+      responsive: true,
       animation: {
         duration: 1000,
         easing: 'easeOutBounce'
@@ -194,9 +194,9 @@ function drawCompareChart(labels, primaryValues, secondaryValues) {
     scales: {
       yAxes: [{
         ticks: {
-          max: 300,
+          max: 30000,
           min: 0,
-          stepSize: 1.0
+          stepSize: 0.5
         }
       }]
     }

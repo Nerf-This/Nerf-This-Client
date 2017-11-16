@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8 ">
-    <title>Nerf This!</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/modules.css">
-    <link rel="stylesheet" href="styles/icons.css">
-    <base href=".">
-    <script id="player-view-template" type="text/x-handlebars-template">
-      <li class="player">
-        <img src="{{profile.avatar}}" alt="Small Avatar for {{profile.nick}}">
-        <h3>{{profile.nick}}</h3>
-        <!-- <h4>{{author}}</h4> -->
-      </li>
-    </script>
-    <script id="compare-view-template" type="text/x-handlebars-template">
-      <li class="player">
-        <img src="{{profile.avatar}}" alt="Small Avatar for {{profile.nick}}">
-        <h3>{{profile.nick}}</h3>
-        <!-- <h4>{{author}}</h4> -->
-      </li>
-    </script>
+<head>
+  <meta charset="utf-8 ">
+  <title>Nerf This!</title>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/modules.css">
+  <link rel="stylesheet" href="styles/icons.css">
+  <base href=".">
+  <script id="player-view-template" type="text/x-handlebars-template">
+    <li class="player">
+      <img src="{{profile.avatar}}" alt="Small Avatar for {{profile.nick}}">
+      <h3>{{profile.nick}}</h3>
+      <!-- <h4>{{author}}</h4> -->
+    </li>
+  </script>
+  <script id="compare-view-template" type="text/x-handlebars-template">
+    <li class="player">
+      <img src="{{profile.avatar}}" alt="Small Avatar for {{profile.nick}}">
+      <h3>{{profile.nick}}</h3>
+      <!-- <h4>{{author}}</h4> -->
+    </li>
+  </script>
 
-  </head>
-  <body>
-    <header>
-      <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <li><a href="">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li><a href="compare">Compare</a></li>
-            <li><a href="team-link">Team Link</a></li>
-          </ul>
-        </div>
-        <div id="logo">
-          <ul>
-            <li><img src="/images/dvasalt.png"></li>
-            <li><h1>Nerf This!</h1></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main>
+</head>
+<body>
+  <header>
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <li><a href="">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="compare">Compare</a></li>
+          <li><a href="team-link">Team Link</a></li>
+        </ul>
+      </div>
+      <div id="logo">
+        <ul>
+          <li><img src="/images/dvasalt.png"></li>
+          <li><h1>Nerf This!</h1></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
 
-      <section class="search container">
-        <div class="form-controller">
+    <section class="search container">
+      <div class="form-controller">
         <form id="primary-tag">
           <select name="platform">
             <option>PC</option>
@@ -83,34 +83,34 @@
           <input name="battletag" type="text" placeholder="Compare Tag">
           <button type="submit">Search</button>
         </form>
-          <img id="searchload-opponent" class="searchload" src="images/search-load.gif" height="45px" alt="Overwatch Search in Progress Circulating Gif, Yellow Honeycomb over Black">
-        </div>
-      </section>
-      <section class="main-start container">
-        <div id="player-start" class="stats-choice">
-          <img src="images/arcade.png" alt="Player Search Image with A Hero Holding a Gun">
-          <h3>Search Your Battletag</h3>
-        </div>
-        <div id="opponent-start" class="stats-choice">
-          <img src="images/comp.png" alt="Player Search Image with A Hero Holding a Gun">
-          <h3>Compare an Opponent</h3>
-        </div>
-        <div id="team-start" class="stats-choice">
-          <img src="images/custom.png" alt="Player Search Image with A Hero Holding a Gun">
-          <h3>Check Your Team</h3>
-        </div>
-        <div id="achievment-start" class="stats-choice">
-          <img src="images/QP.png" alt="Player Search Image with A Hero Holding a Gun">
-          <h3>Check Your Achievements</h3>
-        </div>
-      </section>
-      <section class="player-view container">
-        <ul id="player-detail"></ul>
-        <canvas id="primaryChart" width="960px" height="500px"></canvas>
-      </section>
-      <section class="compare-view container">
-        <h2>Comparison Details</h2>
-        <ul id="stat-buttons">
+        <img id="searchload-opponent" class="searchload" src="images/search-load.gif" height="45px" alt="Overwatch Search in Progress Circulating Gif, Yellow Honeycomb over Black">
+      </div>
+    </section>
+    <section class="main-start container">
+      <div id="player-start" class="stats-choice">
+        <img src="images/arcade.png" alt="Player Search Image with A Hero Holding a Gun">
+        <h3>Search Your Battletag</h3>
+      </div>
+      <div id="opponent-start" class="stats-choice">
+        <img src="images/comp.png" alt="Player Search Image with A Hero Holding a Gun">
+        <h3>Compare an Opponent</h3>
+      </div>
+      <div id="team-start" class="stats-choice">
+        <img src="images/custom.png" alt="Player Search Image with A Hero Holding a Gun">
+        <h3>Check Your Team</h3>
+      </div>
+      <div id="achievment-start" class="stats-choice">
+        <img src="images/QP.png" alt="Player Search Image with A Hero Holding a Gun">
+        <h3>Check Your Achievements</h3>
+      </div>
+    </section>
+    <section class="player-view container">
+      <ul id="player-detail"></ul>
+      <canvas id="primaryChart" width="960px" height="500px"></canvas>
+    </section>
+    <section class="compare-view container">
+      <h2>Comparison Details</h2>
+      <ul id="stat-buttons">
         <li><button id="elims" type="submit">Eliminations</button></li>
         <li><button id="kd" type="submit">K/D Ratio</button></li>
         <li><button id="damage" type="submit">Damage Done</button></li>
@@ -123,41 +123,41 @@
         <li><button id="healing" type="submit">Healing</button></li>
         <li><button id="damage-blocked" type="submit">Damage Blocked</button></li>
       </ul>
-        <ul id="compare-detail"></ul>
+      <ul id="compare-detail"></ul>
         <canvas id="compareChart" width="700px" height="400px"></canvas>
-      </section>
-      <section class="about container">
-        <ul id="seth-about">
-          <li><img src="http://placehold.it/60x60"></li>
-          <li><h4>Seth Donohue</h4></li>
-          <li><p>About paragraph</p></li>
-          <li><a href="https://github.com/SethDonohue">Seth's GitHub</a></li>
-        </ul>
-        <ul id="kat-about">
-          <li><img src="http://placehold.it/60x60"></li>
-          <li><h4>Kat Cosgrove</h4></li>
-          <li><p>About paragraph</p></li>
-          <li><a href="https://github.com/katcosgrove">Kat's GitHub</a></li>
-        </ul>
-        <ul id="garrett-about">
-          <li><img src="http://placehold.it/60x60"></li>
-          <li><h4>Garrett Johnson</h4></li>
-          <li><p>About paragraph</p></li>
-          <li><a href="https://github.com/wgjbv">Garrett's GitHub</a></li>
-        </ul>
-      </section>
-      <section class="team-link container">
-        <p>Team Link is not hidden</p>
-      </section>
-    </main>
-    <footer>2017 Nerf This!</footer>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-    <script src="scripts/models/player.js"></script>
-    <script src="scripts/views/player-view.js"></script>
-    <script src="scripts/views/routes.js"></script>
-    <script src="scripts/views/charts.js"></script>
-  </body>
-  </html>
+    </section>
+    <section class="about container">
+      <ul id="seth-about">
+        <li><img src="http://placehold.it/60x60"></li>
+        <li><h4>Seth Donohue</h4></li>
+        <li><p>About paragraph</p></li>
+        <li><a href="https://github.com/SethDonohue">Seth's GitHub</a></li>
+      </ul>
+      <ul id="kat-about">
+        <li><img src="http://placehold.it/60x60"></li>
+        <li><h4>Kat Cosgrove</h4></li>
+        <li><p>About paragraph</p></li>
+        <li><a href="https://github.com/katcosgrove">Kat's GitHub</a></li>
+      </ul>
+      <ul id="garrett-about">
+        <li><img src="http://placehold.it/60x60"></li>
+        <li><h4>Garrett Johnson</h4></li>
+        <li><p>About paragraph</p></li>
+        <li><a href="https://github.com/wgjbv">Garrett's GitHub</a></li>
+      </ul>
+    </section>
+    <section class="team-link container">
+      <p>Team Link is not hidden</p>
+    </section>
+  </main>
+  <footer>2017 Nerf This!</footer>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script src="scripts/models/player.js"></script>
+  <script src="scripts/views/player-view.js"></script>
+  <script src="scripts/views/routes.js"></script>
+  <script src="scripts/views/charts.js"></script>
+</body>
+</html>

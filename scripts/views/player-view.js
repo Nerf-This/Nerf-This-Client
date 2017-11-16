@@ -85,46 +85,57 @@ var app = app || {};
     drawCompareChart(primaryHeroes, primaryHeroHours, secondaryHeroHours);
     $('#kd').on('click', function (event) {
       event.preventDefault();
+      $('#compare-detail').empty();
       drawCompareChart(primaryHeroes, primaryHeroKD, secondaryHeroKD);
     })
     $('#accuracy').on('click', function (event) {
       event.preventDefault();
+      $('#compare-detail').empty();
       drawCompareChart(primaryHeroes, primaryHeroAcc, secondaryHeroAcc);
     })
     $('#damage').on('click', function (event) {
       event.preventDefault();
+      $('#compare-detail').empty();
       drawCompareChart(primaryHeroes, primaryDamage, secondaryDamage);
     })
     $('#multikill').on('click', function (event) {
       event.preventDefault();
+      $('#compare-detail').empty();
       drawCompareChart(primaryHeroes, primaryMulti, secondaryMulti);
     })
     $('#off-assists').on('click', function (event) {
       event.preventDefault();
+      $('#compare-detail').empty();
       drawCompareChart(primaryHeroes, primaryOffAssist, secondaryOffAssist);
     })
     $('#def-assists').on('click', function (event) {
       event.preventDefault();
+      $('#compare-detail').empty();
       drawCompareChart(primaryHeroes, primaryDefAssist, secondaryDefAssist);
     })
     $('#elims').on('click', function (event) {
       event.preventDefault();
+      $('#compare-detail').empty();
       drawCompareChart(primaryHeroes, primaryHeroElims, secondaryHeroElims);
     })
     $('#env-kills').on('click', function (event) {
       event.preventDefault();
+      $('#compare-detail').empty();
       drawCompareChart(primaryHeroes, primaryEnvKills, secondaryEnvKills);
     })
     $('#objective-time').on('click', function (event) {
       event.preventDefault();
+      $('#compare-detail').empty();
       drawCompareChart(primaryHeroes, primaryHeroObj, secondaryHeroObj);
     })
     $('#healing').on('click', function (event) {
       event.preventDefault();
+      $('#compare-detail').empty();
       drawCompareChart(primaryHeroes, primaryHealing, secondaryHealing);
     })
     $('#damage-blocked').on('click', function (event) {
       event.preventDefault();
+      $('#compare-detail').empty();
       drawCompareChart(primaryHeroes, primaryBlocked, secondaryBlocked);
     })
   }
