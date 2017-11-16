@@ -14,13 +14,22 @@ var app = app || {};
   playerView.initSearchBar = function() {
     $('.searchload').hide();
     $('.search').show();
+
+    //Check for localStorage, if exists
+    if (localStorage.playerBattletag) {
+      console.log('Local Storage ', localStorage.playerBattletag);
+      $('#player-battletag').val(localStorage.playerBattletag);
+    }
+    if (localStorage.opponentBattletag) {
+      console.log('Local Storage ', localStorage.opponentBattletag);
+      $('#opponent-battletag').val(localStorage.opponentBattletag);
+    }
   }
 
   playerView.initIndexPage = function() {
     console.log('initindexpage triggered');
 
     reset();
-    // $('.search').show();
     $('#player-start').on('click', function (event) {
       console.log('BattleTag Main Search Clicked');
       event.preventDefault();
@@ -34,23 +43,13 @@ var app = app || {};
     //Check for localStorage, if exists call initPlayerPage
     console.log('Check for Local Storage', localStorage.playerBattletag);
 
-    // TODO: MOVE THESE LS FUNCTIONS
-    // if (localStorage.playerBattletag) {
-    //   app.Player.loadPlayer(localStorage.playerPlatform, localStorage.playerRegion, localStorage.playerBattletag);
-    // }
-    //
-    // if (localStorage.opponentBattletag) {
-    //   app.Player.comparePlayer(localStorage.opponentPlatform, localStorage.opponentRegion, localStorage.opponentBattletag);
-    // }
 
   }
-  //TODO: Flesh out initAboutPage
   playerView.initAboutPage = function() {
     console.log('initaboutpage triggered');
     reset();
     $('.about').show();
   }
-  //TODO: Flesh out initAchievementPage
   playerView.initAchievementPage = function() {
     console.log('initachievementpage triggered');
     reset();
@@ -62,10 +61,8 @@ var app = app || {};
     reset();
     $('.team-link').show();
   }
-  //DONE Complete player stats appending
   playerView.initPlayerPage = function () {
 
-    //Check for localStorage, if exists
     //Append Main Player
     $('#player-detail').empty();
     $('#player-detail').append(allPlayers[0].toHtml('player'));
@@ -75,8 +72,7 @@ var app = app || {};
   }
 
   playerView.initComparePage = function () {
-    // #('hide stuffs').hide();
-    // reset();
+
     //Append Main Player
     $('#primaryChart').hide();
     $('#compare-detail').empty();
