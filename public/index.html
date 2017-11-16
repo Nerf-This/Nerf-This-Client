@@ -13,12 +13,14 @@
     <li class="player">
       <img src="{{profile.avatar}}" alt="Small Avatar for {{profile.nick}}">
       <h3>{{profile.nick}}</h3>
+      <p>{{totalHours}} Hours Played</p>
     </li>
   </script>
   <script id="compare-view-template" type="text/x-handlebars-template">
     <li class="player">
       <img src="{{profile.avatar}}" alt="Small Avatar for {{profile.nick}}">
       <h3>{{profile.nick}}</h3>
+      <p>{{totalHours}} Hours Played</p>
     </li>
   </script>
 
@@ -91,6 +93,7 @@
         <img src="images/custom.jpg" alt="Player Search Image with A Hero Holding a Gun">
         <h3>Compare an Opponent</h3>
       </div>
+
       <div id="achievment-start" class="stats-choice">
         <img src="images/QP.jpg" alt="Player Search Image with A Hero Holding a Gun">
         <h3>Check Your Achievements</h3>
@@ -99,6 +102,19 @@
 
     <section class="player-view container">
       <ul id="player-detail"></ul>
+      <ul id="stat-buttons">
+        <li><button id="elims" type="submit">Eliminations</button></li>
+        <li><button id="kd" type="submit">K/D Ratio</button></li>
+        <li><button id="damage" type="submit">Damage Done</button></li>
+        <li><button id="accuracy" type="submit">Accuracy</button></li>
+        <li><button id="multikill" type="submit">Best Multikill</button></li>
+        <li><button id="off-assists" type="submit">Off. Assists</button></li>
+        <li><button id="def-assists" type="submit">Def. Assists</button></li>
+        <li><button id="env-kills" type="submit">Env. Kills</button></li>
+        <li><button id="objective-time" type="submit">Objective Time</button></li>
+        <li><button id="healing" type="submit">Healing</button></li>
+        <li><button id="damage-blocked" type="submit">Damage Blocked</button></li>
+      </ul>
       <canvas id="primaryChart" width="960px" height="500px"></canvas>
     </section>
 
