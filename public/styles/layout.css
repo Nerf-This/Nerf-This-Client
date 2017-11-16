@@ -23,11 +23,23 @@ footer {
   width: 20%;
   margin: 3% 1.5% 3% 1.5%;
   display: inline-block;
-  background-color: black;
 }
 
-.stats-choice > h3 {
+.stats-choice img {
+  box-shadow: 0 3px 5px rgba(255,255,255,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.stats-choice img:hover {
+  box-shadow: 5px 10px 25px rgba(255,255,255,0.4);
+}
+
+.stats-choice h3 {
   font-family: 'overwatch';
-  font-size: 200%;
+  font-size: 4vh;
   font-style: italic;
+  color: black;
+  position: relative;
+  bottom: 15vh;
+  margin-bottom: 10%;
 }
