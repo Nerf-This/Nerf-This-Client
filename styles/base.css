@@ -22,8 +22,12 @@ button {
   color: black;
 }
 
-main {
+/*main {
   background-image: url('../images/oversalted.jpg');
   height: 900px;
   width: auto;
+}*/
+
+body {
+  background-image: url('../images/lijiangblur.png')
 }
