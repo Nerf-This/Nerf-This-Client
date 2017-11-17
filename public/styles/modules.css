@@ -105,6 +105,7 @@ form > input, form > select, form > button {
 
 canvas {
   margin-bottom: 10vh;
+  max-height: 60vh;
 }
 
 .about {
@@ -135,6 +136,10 @@ canvas {
   font-size: 3vh;
   font-size: 1vw;
   font-family: 'overwatch';
+}
+
+#player-detail img {
+  margin-top: 3vh;
 }
 
 /*************************************/
@@ -282,7 +287,6 @@ a:hover
     margin-top: -3vh;
     width: 100%;
     height: auto;
-
   }
 
   .stats-choice img {
@@ -291,7 +295,7 @@ a:hover
 
   .player-view {
     font-size: 3vh;
-    margin-top: 3vh;
+    margin-top: 5vh;
     font-family: 'overwatch';
     font-style: italic;
     display: block;
@@ -305,12 +309,57 @@ a:hover
     display: block;
   }
 
+  #compareChart {
+    margin-top: 1vh;
+  }
+
+  .compare-view h2 {
+    text-align: center;
+    font-size: 8vw;
+    margin-top: -4vh;
+  }
+
+  .container img, .container h3, .container p {
+    margin-bottom: 2.5vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-top: 2.5vw;
+  }
+
+  #player-detail img {
+    margin-bottom: 2.5vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-top: 2.5vw;
+  }
+
+  .container li img {
+    width: 75%;
+  }
+
   .player-detail img {
     width: 80%;
   }
 
   .compare-detail img {
     width: 80%;
+  }
+
+  .searchload {
+    position: fixed;
+    top: 60vh;
+    right: 30vw;
+    width: 35%;
+    height: 15%;
+    border-radius: 5vw;
+  }
+
+  #damage-blocked {
+    display: none;
+  }
+
+  form input {
+    width: 50vw;
   }
 
   #primary-tag {
@@ -330,14 +379,10 @@ a:hover
     background-color: white;
   }
 
-  #primary-tag button {
+  #secondary-tag button, #primary-tag button {
     padding: .2vw;
     width: 20vw;
-  }
-
-  #secondary-tag button {
-    padding: .2vw;
-    width: 20vw;
+    height: 4vh;
   }
 
   #compare-player-button {
@@ -357,11 +402,10 @@ a:hover
     font-size: 2vh
   }
 
-  .compare-view h2 {
-    text-align: center;
-    font-size: 8vw;
-    margin-top: -4vh;
-
+  #compare-player-button {
+    position: absolute;
+    top: 10vh;
+    right: 4vw;
   }
 
 }
