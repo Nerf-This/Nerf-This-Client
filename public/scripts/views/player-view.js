@@ -86,59 +86,54 @@ var app = app || {};
     $('.player-view').show();
     destroyChart();
     drawSingleChart(primaryHeroes, primaryHeroHours);
-    $('#kd').on('click', function (event) {
+    $('#kd1').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryHeroKD);
     })
-    $('#accuracy').on('click', function (event) {
+    $('#accuracy1').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryHeroAcc);
     })
-    $('#damage').on('click', function (event) {
+    $('#damage1').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryDamage);
     })
-    $('#multikill').on('click', function (event) {
+    $('#multikill1').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryMulti);
     })
-    $('#off-assists').on('click', function (event) {
+    $('#off-assists1').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryOffAssist);
     })
-    $('#def-assists').on('click', function (event) {
+    $('#def-assists1').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryDefAssist);
     })
-    $('#elims').on('click', function (event) {
+    $('#elims1').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryHeroElims);
     })
-    $('#env-kills').on('click', function (event) {
+    $('#objective-time1').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
-      drawSingleChart(primaryHeroes, primaryEnvKills);
-    })
-    $('#objective-time').on('click', function (event) {
-      event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryHeroObj);
     })
-    $('#healing').on('click', function (event) {
+    $('#healing1').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryHealing);
     })
-    $('#damage-blocked').on('click', function (event) {
+    $('#damage-blocked1').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryBlocked);
     })
   }
@@ -147,6 +142,7 @@ var app = app || {};
 
     //Append Main Player
     $('#primaryChart').hide();
+    $('#solo-stat-buttons').hide();
     $('#compare-detail').empty();
     $('#compare-detail').append(allPlayers[1].toHtml('compare'));
     $('.compare-view').show();
@@ -185,11 +181,6 @@ var app = app || {};
       event.preventDefault();
       destroyChart();
       drawCompareChart(primaryHeroes, primaryHeroElims, secondaryHeroElims);
-    })
-    $('#env-kills').on('click', function (event) {
-      event.preventDefault();
-      destroyChart();
-      drawCompareChart(primaryHeroes, primaryEnvKills, secondaryEnvKills);
     })
     $('#objective-time').on('click', function (event) {
       event.preventDefault();

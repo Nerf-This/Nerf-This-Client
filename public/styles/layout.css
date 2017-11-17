@@ -3,8 +3,9 @@ header {
   background-color: rgba(0,0,0,.6);
   color: white;
   list-style: none;
-  height: 120px;
+  height: 15vh;
   font-family: 'overwatch';
+  font-size: 15vw;
   font-style: italic;
   text-align: center;
   font-size: 4vw;
@@ -17,4 +18,8 @@ button {
   border-radius: 2px;
   width: 7vw;
   height: 3vh;
+}
+
+@media only screen and (max-width: 640px) {
+
 }
