@@ -10,7 +10,7 @@ function drawSingleChart(labels, values) { // eslint-disable-line
       labels: labels,
       datasets: [
         {
-          label: 'Hours Played',
+          label: 'Your Performance',
           data: values,
           backgroundColor: [
             'rgb(255,18,0)',

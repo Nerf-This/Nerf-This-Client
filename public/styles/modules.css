@@ -40,19 +40,19 @@
 }
 
 .form-controller {
-  margin: 0;
-  height: 125px;
-  width: 50%;
-  max-width: 750px;
+  margin-left: 8vw;
+  margin-top: 3vh;
+  height: 10vh;
+  width: 40vw;
   display: inline-block;
 }
 
-form {
-  margin: 40px 1% 40px 1%;
+/*form {
+  margin-left: 3vw;
   width: 80%;
-  height: 45px;
+  height: 3vh;
   float: left;
-}
+}*/
 
 form > input, form > select, form > button {
   font-size: 150%;
@@ -109,8 +109,9 @@ form > input, form > select, form > button {
 }
 
 #compare-player-button {
-  height: 45px;
-  margin: 40px;
+  width: 120px;
+  height: 30px;
+  /*margin: 40px;*/
 }
 
 canvas {
@@ -139,6 +140,12 @@ canvas {
   font-family: 'overwatch';
   font-size: 2.2vh;
   color: white;
+}
+
+.about p {
+  font-size: 3vh;
+  font-size: 1vw;
+  font-family: 'overwatch';
 }
 
 /*************************************/

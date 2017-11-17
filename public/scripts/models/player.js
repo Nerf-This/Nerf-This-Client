@@ -186,7 +186,7 @@ let secondaryBlocked = [];
       if(!allPlayers[player].heroes[key].objective_time_most_in_game){
         arr.push(0);
       }else{
-        arr.push(Math.ceil(allPlayers[player].heroes[key].objective_time_most_in_game/3600000));
+        arr.push(allPlayers[player].heroes[key].objective_time_most_in_game/1800000);
       }
     }
     return arr;
