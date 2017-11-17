@@ -1,8 +1,33 @@
 /*As briefly mentioned in the previous section, a Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.*/
+@media only screen and (max-width: 640px) {
+  header h1 {
+    font-size: 15vw;
+  }
+
+  .stats-choice {
+    display: block;
+  }
+
+  .player-view {
+    font-size: 10vh;
+    font-family: 'overwatch';
+    font-style: italic;
+    display: block;
+  }
+
+}
 
 .main-start {
   text-align: center;
   margin: 0 auto;
+}
+
+.main-start div {
+  margin: 5vw;
+}
+
+.main-start img {
+  width: 100%;
 }
 
 .stats-choice {
@@ -30,29 +55,20 @@
   margin-bottom: 10%;
 }
 
-#logo {
-  margin-top: -15px;
-  margin-left: 50%;
-}
-
-#logo img {
-  height: 80px;
-}
-
 .form-controller {
-  margin: 0;
-  height: 125px;
-  width: 50%;
-  max-width: 750px;
+  margin-left: 8vw;
+  margin-top: 3vh;
+  height: 10vh;
+  width: 40vw;
   display: inline-block;
 }
 
-form {
-  margin: 40px 1% 40px 1%;
+/*form {
+  margin-left: 3vw;
   width: 80%;
-  height: 45px;
+  height: 3vh;
   float: left;
-}
+}*/
 
 form > input, form > select, form > button {
   font-size: 150%;
@@ -60,14 +76,16 @@ form > input, form > select, form > button {
   margin: 1%;
 }
 
-.searchload {
-  margin: 40px 0.25% 40px -3px;
-  border-radius: 10px;
-  display: inline-block;
-}
-
 #stat-buttons {
   margin-left: 5vw;
+}
+
+#solo-stat-buttons {
+  margin-left: 5vw;
+}
+
+#solo-stat-buttons li {
+  display: inline-block;
 }
 
 #stat-buttons li {
@@ -85,13 +103,14 @@ form > input, form > select, form > button {
 }
 
 .player-view {
-  font-size: 50px;
+  font-size: 15vh;
   font-family: 'overwatch';
   font-style: italic;
   display: block;
 }
+
 .compare-view {
-  font-size: 50px;
+  font-size: 10vh;
   font-family: 'overwatch';
   font-style: italic;
 }
@@ -101,8 +120,10 @@ form > input, form > select, form > button {
 }
 
 #compare-player-button {
-  height: 45px;
-  margin: 40px;
+  width: 7vw;
+  height: 3.2vh;
+  margin-left: -8vw;
+  margin-top: 1.2vh;
 }
 
 canvas {
@@ -131,6 +152,12 @@ canvas {
   font-family: 'overwatch';
   font-size: 2.2vh;
   color: white;
+}
+
+.about p {
+  font-size: 3vh;
+  font-size: 1vw;
+  font-family: 'overwatch';
 }
 
 /*************************************/

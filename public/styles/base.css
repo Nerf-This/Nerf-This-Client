@@ -13,6 +13,9 @@
     font-style: normal;
 }
 
+@media only screen and (max-width: 640px) {
+}
+
 * {
   color: white;
 }
@@ -27,12 +30,6 @@ a {
 
 a:hover {
   color: white;
-}
-
-p {
-  font-size: 3vh;
-  font-size: 1vw;
-  font-family: 'overwatch';
 }
 
 h1 {
