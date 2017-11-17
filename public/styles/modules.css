@@ -105,7 +105,7 @@ form > input, form > select, form > button {
 
 canvas {
   margin-bottom: 10vh;
-  max-height: 80vh;
+  /*max-height: 80vh;*/
 }
 
 .about {
@@ -114,28 +114,45 @@ canvas {
 }
 
 .about div {
-  width: 30vw;
-  margin-left: 35vw;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
   text-align: center;
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
+}
+
+.about h2 {
+  margin: 5%;
+  margin-bottom: 1%;
+  font-size: 6vw;
+}
+
+.about h1 {
+  margin: 5%;
+  font-size: 8vw;
 }
 
 .about img {
   width: 24vw;
   height: auto;
+  margin: 1%;
+  margin-top: 0.5%;
+  margin-top: 5%;
 }
 
 .about a {
   text-decoration: none;
   font-family: 'overwatch';
-  font-size: 2.2vh;
-  color: white;
+  font-size: 3vw;
+  color: lightgray;
 }
 
 .about p {
-  font-size: 3vh;
-  font-size: 1vw;
+  font-size: 3vw;
   font-family: 'overwatch';
+  font-style: normal;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0.5%;
 }
 
 #player-detail img {
@@ -417,4 +434,11 @@ a:hover
     right: 4vw;
   }
 
+  .about img {
+    width: 24vw;
+    height: auto;
+    margin: 1%;
+    margin-top: 0.5%;
+    margin-top: 5%;
+  }
 }
