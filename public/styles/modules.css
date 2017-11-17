@@ -124,12 +124,12 @@ canvas {
 .about h2 {
   margin: 5%;
   margin-bottom: 1%;
-  font-size: 6vw;
+  font-size: 5vw;
 }
 
 .about h1 {
   margin: 5%;
-  font-size: 8vw;
+  font-size: 7vw;
 }
 
 .about img {
@@ -137,7 +137,7 @@ canvas {
   height: auto;
   margin: 1%;
   margin-top: 0.5%;
-  margin-top: 5%;
+  /*margin-top: 5%;*/
 }
 
 .about a {
@@ -148,7 +148,7 @@ canvas {
 }
 
 .about p {
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-family: 'overwatch';
   font-style: normal;
   font-family: 'Roboto', sans-serif;
@@ -440,5 +440,26 @@ a:hover
     margin: 1%;
     margin-top: 0.5%;
     margin-top: 5%;
+  }
+
+  .about div {
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-align: center;
+    margin-bottom: 2vh;
+  }
+
+  .about p {
+    /*font-size: 2.5vw;
+    font-family: 'overwatch';
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;*/
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+  }
+
+  .about img {
+    margin-top: 0.5%;
   }
 }
