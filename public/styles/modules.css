@@ -290,7 +290,7 @@ a:hover
   }
 
   .player-view {
-    font-size: 6vh;
+    font-size: 3vh;
     margin-top: 3vh;
     font-family: 'overwatch';
     font-style: italic;
@@ -314,8 +314,17 @@ a:hover
   #compare-player-button {
     font-size: 2.5vh;
     width: 30vw;
-    margin-left: -11vw;
     margin-top: 10vh;
+  }
+
+  #solo-stat-buttons button {
+    margin-left: 3vw;
+    font-size: 2.5vh;
+    width: 28vw;
+  }
+
+  .player-detail img {
+    width: 80%;
   }
 
 }
