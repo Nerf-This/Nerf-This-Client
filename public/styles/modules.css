@@ -47,13 +47,6 @@
   display: inline-block;
 }
 
-/*form {
-  margin-left: 3vw;
-  width: 80%;
-  height: 3vh;
-  float: left;
-}*/
-
 form > input, form > select, form > button {
   font-size: 150%;
   color: black;
@@ -281,36 +274,94 @@ a:hover
 
   .stats-choice h3 {
     margin-top: 8vw;
-    margin-bottom: 1vw;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    padding: 3vw;
-    background-color: #e0dfe5;
-    width: 75%;
-    border-radius: 3vw;
-    border: 1vw solid black;
 
   }
 
   .stats-choice {
     display: block;
-    /*background-color: #e0dfe5;*/
+    margin-top: -3vh;
     width: 100%;
-    height: 300px;
+    height: auto;
 
   }
 
   .stats-choice img {
-    width: 50%;
-    height: 95%;
-
+    width: 60%;
   }
 
   .player-view {
-    font-size: 10vh;
+    font-size: 3vh;
+    margin-top: 3vh;
     font-family: 'overwatch';
     font-style: italic;
     display: block;
+  }
+
+  .compare-view {
+    font-size: 3vh;
+    margin-top: 3vh;
+    font-family: 'overwatch';
+    font-style: italic;
+    display: block;
+  }
+
+  .player-detail img {
+    width: 80%;
+  }
+
+  .compare-detail img {
+    width: 80%;
+  }
+
+  #primary-tag {
+    margin-left: -5vw;
+    display: block;
+  }
+
+  #secondary-tag {
+    display: block;
+  }
+
+  #primary-tag select {
+    background-color: white;
+  }
+
+  #secondary-tag select {
+    background-color: white;
+  }
+
+  #primary-tag button {
+    padding: .2vw;
+    width: 20vw;
+  }
+
+  #secondary-tag button {
+    padding: .2vw;
+    width: 20vw;
+  }
+
+  #compare-player-button {
+    font-size: 2.5vh;
+    width: 30vw;
+    margin-top: 10vh;
+  }
+
+  #solo-stat-buttons button {
+    margin-left: 3vw;
+    font-size: 2.5vh;
+    width: 28vw;
+  }
+
+  #stat-buttons button {
+    width: 20vw;
+    font-size: 2vh
+  }
+
+  .compare-view h2 {
+    text-align: center;
+    font-size: 8vw;
+    margin-top: -4vh;
+
   }
 
 }
