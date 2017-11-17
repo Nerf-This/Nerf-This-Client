@@ -65,7 +65,7 @@ function drawSingleChart(labels, values) { // eslint-disable-line
         }]
     },
     options: {
-      responsive: false,
+      responsive: true,
       animation: {
         duration: 1000,
         easing: 'easeOutBounce'
@@ -229,8 +229,17 @@ function drawCompareChart(labels, primaryValues, secondaryValues) { // eslint-di
 //Destroying the chart every time it needs to be redrawn
 function destroyChart () { // eslint-disable-line
   $('#compareChart').remove();
-  $('.compare-view').append('<canvas id="compareChart"><canvas>');
+  $('.compare-view').append('<canvas id="compareChart"></canvas>');
   let canvas = document.querySelector('#compareChart');
+  let ctx = canvas.getContext('2d');
+  ctx.canvas.width = $('#graph').width();
+  ctx.canvas.height = $('#graph').height();
+}
+
+function destroySolo () {
+  $('#primaryChart').remove();
+  $('.player-view').append('<canvas id="primaryChart"></canvas');
+  let canvas = document.querySelector('#primaryChart');
   let ctx = canvas.getContext('2d');
   ctx.canvas.width = $('#graph').width();
   ctx.canvas.height = $('#graph').height();

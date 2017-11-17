@@ -77,57 +77,57 @@ var app = app || {};
     drawSingleChart(primaryHeroes, primaryHeroHours);
     $('#kd').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryHeroKD);
     })
     $('#accuracy').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryHeroAcc);
     })
     $('#damage').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryDamage);
     })
     $('#multikill').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryMulti);
     })
     $('#off-assists').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryOffAssist);
     })
     $('#def-assists').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryDefAssist);
     })
     $('#elims').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryHeroElims);
     })
     $('#env-kills').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryEnvKills);
     })
     $('#objective-time').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryHeroObj);
     })
     $('#healing').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryHealing);
     })
     $('#damage-blocked').on('click', function (event) {
       event.preventDefault();
-      destroyChart();
+      destroySolo();
       drawSingleChart(primaryHeroes, primaryBlocked);
     })
   }

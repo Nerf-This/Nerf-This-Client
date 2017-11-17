@@ -70,6 +70,14 @@ form > input, form > select, form > button {
   margin-left: 5vw;
 }
 
+#solo-stat-buttons {
+  margin-left: 5vw;
+}
+
+#solo-stat-buttons li {
+  display: inline-block;
+}
+
 #stat-buttons li {
   display: inline-block;
 }
