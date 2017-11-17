@@ -30,21 +30,10 @@
   margin-bottom: 10%;
 }
 
-#logo {
-  margin-top: -15px;
-  margin-left: 50%;
-}
-
-#logo img {
-  height: 80px;
-}
-
 .form-controller {
-  margin: 0;
   height: 125px;
-  width: 50%;
+  width: 100%;
   max-width: 750px;
-  display: inline-block;
 }
 
 form {
@@ -84,29 +73,43 @@ form > input, form > select, form > button {
   margin-right: 3%;
 }
 
-.player-view {
-  font-size: 50px;
-  font-family: 'overwatch';
-  font-style: italic;
-  display: block;
-}
-.compare-view {
-  font-size: 50px;
-  font-family: 'overwatch';
-  font-style: italic;
-}
-
-.primary {
-  float: left;
-}
-
-#compare-player-button {
-  height: 45px;
-  margin: 40px;
-}
-
 canvas {
   margin-bottom: 10vh;
+}
+
+.about {
+  font-family: 'overwatch';
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.about div {
+  width: 30vw;
+  margin-left: 35vw;
+  margin-bottom: 2vh;
+}
+
+.about h1 {
+  font-size: 4vw;
+}
+
+.about h2 {
+  font-size: 3vw;
+}
+
+.about p {
+  font-size: 1.2vw;
+}
+
+.about img {
+  width: 24vw;
+  height: auto;
+}
+
+.about a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2vw;
 }
 
 /*************************************/
