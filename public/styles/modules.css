@@ -105,7 +105,7 @@ form > input, form > select, form > button {
 
 canvas {
   margin-bottom: 10vh;
-  max-height: 60vh;
+  max-height: 80vh;
 }
 
 .about {
@@ -140,6 +140,15 @@ canvas {
 
 #player-detail img {
   margin-top: 3vh;
+}
+
+.searchload {
+  position: fixed;
+  top: 60vh;
+  right: 40vw;
+  width: 20%;
+  height: 25%;
+  border-radius: 5vw;
 }
 
 /*************************************/
