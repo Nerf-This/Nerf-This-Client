@@ -32,36 +32,46 @@ var app = app || {};
     console.log('initindexpage triggered');
 
     reset();
-    $('#player-start').on('click', function (event) {
-      console.log('BattleTag Main Search Clicked');
-      event.preventDefault();
-
-      $('.container').hide();
-      playerView.initSearchBar();
-      $('#secondary-tag').hide();
-
-      $('#compare-player-button').on('click', function (event) {
-        $('#secondary-tag').show();
-        $('#compare-player-button').hide();
-
-      })
-
-    })
+    // $('#player-start').on('click', function (event) {
+    //   console.log('BattleTag Main Search Clicked');
+    //   event.preventDefault();
+    //
+    //   $('.container').hide();
+    //   playerView.initSearchBar();
+    //   $('#secondary-tag').hide();
+    //
+    //   $('#compare-player-button').on('click', function (event) {
+    //     $('#secondary-tag').show();
+    //     $('#compare-player-button').hide();
+    //
+    //   })
+    //
+    // })
     $('.main-start').show();
-
-
+  }
+  playerView.initProfilePage = function() {
+    console.log('whats going on');
+    $('.container').hide();
+    playerView.initSearchBar();
+    $('#secondary-tag').hide();
+    $('#compare-player-button').show();
+    $('#compare-player-button').on('click', function(e){
+      e.preventDefault();
+      page('/compare');
+    })
   }
   playerView.initAboutPage = function() {
     console.log('initaboutpage triggered');
     reset();
     $('.about').show();
   }
-  playerView.initAchievementPage = function() {
+  playerView.initOpponentPage = function() {
     console.log('initachievementpage triggered');
     reset();
     $('.achievement-view').show();
     playerView.initSearchBar();
     $('#compare-player-button').hide();
+    $('#secondary-tag').show();
   }
 
   playerView.initTeamPage = function() {
