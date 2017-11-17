@@ -61,6 +61,7 @@ var app = app || {};
     reset();
     $('.achievement-view').show();
     playerView.initSearchBar();
+    $('#compare-player-button').hide();
   }
 
   playerView.initTeamPage = function() {
