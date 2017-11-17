@@ -62,7 +62,6 @@ let secondaryBlocked = [];
       primaryOffAssist = heroOffAssist(0);
       primaryDefAssist = heroDefAssist(0);
       primaryMulti = heroMulti(0);
-      primaryEnvKills = heroEnvKills(0);
       primaryBlocked = heroBlocked(0);
     })
 
@@ -86,7 +85,6 @@ let secondaryBlocked = [];
       secondaryOffAssist = heroOffAssist(1);
       secondaryDefAssist = heroDefAssist(1);
       secondaryMulti = heroMulti(1);
-      secondaryEnvKills = heroEnvKills(1);
       secondaryBlocked = heroBlocked(1);
     })
       .then(() => {app.playerView.initComparePage(primaryHeroes, primaryHeroHours, secondaryHeroHours)})
@@ -239,19 +237,6 @@ let secondaryBlocked = [];
         arr.push(0);
       }else{
         arr.push(allPlayers[player].heroes[key].multikill_best);
-      }
-    }
-    return arr;
-  }
-
-  //Getting environmental kills
-  function heroEnvKills(player) {
-    let arr = [];
-    for(var key in allPlayers[player].heroes){
-      if(!allPlayers[player].heroes[key].environmental_kills){
-        arr.push(0);
-      }else{
-        arr.push(allPlayers[player].heroes[key].environmental_kills);
       }
     }
     return arr;

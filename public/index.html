@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8 ">
   <title>Nerf This!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
   <link rel="stylesheet" href="styles/icons.css">
   <base href=".">
+
   <script id="player-view-template" type="text/x-handlebars-template">
     <li class="player">
       <img src="{{profile.avatar}}" alt="Small Avatar for {{profile.nick}}">
@@ -16,6 +18,7 @@
       <p>{{totalHours}} Hours Played</p>
     </li>
   </script>
+
   <script id="compare-view-template" type="text/x-handlebars-template">
     <li class="player">
       <img src="{{profile.avatar}}" alt="Small Avatar for {{profile.nick}}">
@@ -42,6 +45,21 @@
     </nav>
   </header>
   <main>
+
+    <section class="main-start container">
+      <div id="player-start" class="stats-choice">
+        <img src="images/arcade.jpg" alt="Player Search Image with A Hero Holding a Gun">
+        <h3>Search Your Battletag</h3>
+      </div>
+
+      <div id="opponent-start" class="stats-choice">
+        <a href="compare">
+          <img src="images/custom.jpg" alt="Player Search Image with A Hero Holding a Gun">
+        </a>
+        <h3>Compare an Opponent</h3>
+      </div>
+    </section>
+
     <section class="search container">
        <div class="primary form-controller">
         <form id="primary-tag">
@@ -81,34 +99,19 @@
       </div>
     </section>
 
-    <section class="main-start container">
-      <div id="player-start" class="stats-choice">
-        <img src="images/arcade.jpg" alt="Player Search Image with A Hero Holding a Gun">
-        <h3>Search Your Battletag</h3>
-      </div>
-
-      <div id="opponent-start" class="stats-choice">
-        <a href="compare">
-          <img src="images/custom.jpg" alt="Player Search Image with A Hero Holding a Gun">
-        </a>
-        <h3>Compare an Opponent</h3>
-      </div>
-    </section>
-
     <section class="player-view container">
       <ul id="player-detail"></ul>
       <ul id="solo-stat-buttons">
-        <li><button id="elims" type="submit">Eliminations</button></li>
-        <li><button id="kd" type="submit">K/D Ratio</button></li>
-        <li><button id="damage" type="submit">Damage Done</button></li>
-        <li><button id="accuracy" type="submit">Accuracy</button></li>
-        <li><button id="multikill" type="submit">Best Multikill</button></li>
-        <li><button id="off-assists" type="submit">Off. Assists</button></li>
-        <li><button id="def-assists" type="submit">Def. Assists</button></li>
-        <li><button id="env-kills" type="submit">Env. Kills</button></li>
-        <li><button id="objective-time" type="submit">Objective Time</button></li>
-        <li><button id="healing" type="submit">Healing</button></li>
-        <li><button id="damage-blocked" type="submit">Damage Blocked</button></li>
+        <li><button id="elims1" type="submit">Eliminations</button></li>
+        <li><button id="kd1" type="submit">K/D Ratio</button></li>
+        <li><button id="damage1" type="submit">Damage Done</button></li>
+        <li><button id="accuracy1" type="submit">Accuracy</button></li>
+        <li><button id="multikill1" type="submit">Best Multikill</button></li>
+        <li><button id="off-assists1" type="submit">Off. Assists</button></li>
+        <li><button id="def-assists1" type="submit">Def. Assists</button></li>
+        <li><button id="objective-time1" type="submit">Objective Time</button></li>
+        <li><button id="healing1" type="submit">Healing</button></li>
+        <li><button id="damage-blocked1" type="submit">Damage Blocked</button></li>
       </ul>
       <canvas id="primaryChart" width="960px" height="500px"></canvas>
     </section>
@@ -124,7 +127,6 @@
         <li><button id="multikill" type="submit">Best Multikill</button></li>
         <li><button id="off-assists" type="submit">Off. Assists</button></li>
         <li><button id="def-assists" type="submit">Def. Assists</button></li>
-        <li><button id="env-kills" type="submit">Env. Kills</button></li>
         <li><button id="objective-time" type="submit">Objective Time</button></li>
         <li><button id="healing" type="submit">Healing</button></li>
         <li><button id="damage-blocked" type="submit">Damage Blocked</button></li>
