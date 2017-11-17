@@ -1,21 +1,5 @@
 /*As briefly mentioned in the previous section, a Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.*/
-@media only screen and (max-width: 640px) {
-  header h1 {
-    font-size: 15vw;
-  }
 
-  .stats-choice {
-    display: block;
-  }
-
-  .player-view {
-    font-size: 10vh;
-    font-family: 'overwatch';
-    font-style: italic;
-    display: block;
-  }
-
-}
 
 .main-start {
   text-align: center;
@@ -284,4 +268,49 @@ a:hover
 #menuToggle input:checked ~ ul
 {
   transform: none;
+}
+
+@media only screen and (max-width: 640px) {
+  header h1 {
+    font-size: 15vw;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .stats-choice h3 {
+    margin-top: 8vw;
+    margin-bottom: 1vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding: 3vw;
+    background-color: #e0dfe5;
+    width: 75%;
+    border-radius: 3vw;
+    border: 1vw solid black;
+
+  }
+
+  .stats-choice {
+    display: block;
+    /*background-color: #e0dfe5;*/
+    width: 100%;
+    height: 300px;
+
+  }
+
+  .stats-choice img {
+    width: 50%;
+    height: 95%;
+
+  }
+
+  .player-view {
+    font-size: 10vh;
+    font-family: 'overwatch';
+    font-style: italic;
+    display: block;
+  }
+
 }
