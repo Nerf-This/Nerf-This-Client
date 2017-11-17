@@ -53,6 +53,10 @@ form > input, form > select, form > button {
   margin: 1%;
 }
 
+form select option {
+  color: black;
+}
+
 #stat-buttons {
   margin-left: 5vw;
 }
@@ -97,14 +101,17 @@ form > input, form > select, form > button {
 }
 
 #compare-player-button {
-  width: 7vw;
-  height: 3.2vh;
+  width: 15vw;
+  font-size: 3vh;
+  height: 4vh;
   margin-left: -8vw;
   margin-top: 1.2vh;
 }
 
 canvas {
-  margin-bottom: 10vh;
+  margin-bottom: 3vh;
+  /*margin-left: 1vw;
+  margin-right: 1vw;*/
   /*max-height: 80vh;*/
 }
 
@@ -451,15 +458,18 @@ a:hover
   }
 
   .about p {
-    /*font-size: 2.5vw;
-    font-family: 'overwatch';
-    font-style: normal;
-    font-family: 'Roboto', sans-serif;*/
     margin-bottom: 0.5%;
     margin-top: 0.5%;
   }
 
   .about img {
     margin-top: 0.5%;
+  }
+
+  #menu {
+    width: 20vw;
+    height: 10vh;
+    padding: 10vw;
+    padding-top: 15vh;
   }
 }
