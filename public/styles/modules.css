@@ -47,13 +47,6 @@
   display: inline-block;
 }
 
-/*form {
-  margin-left: 3vw;
-  width: 80%;
-  height: 3vh;
-  float: left;
-}*/
-
 form > input, form > select, form > button {
   font-size: 150%;
   color: black;
@@ -281,36 +274,48 @@ a:hover
 
   .stats-choice h3 {
     margin-top: 8vw;
-    margin-bottom: 1vw;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    padding: 3vw;
-    background-color: #e0dfe5;
-    width: 75%;
-    border-radius: 3vw;
-    border: 1vw solid black;
 
   }
 
   .stats-choice {
     display: block;
-    /*background-color: #e0dfe5;*/
+    margin-top: -3vh;
     width: 100%;
-    height: 300px;
+    height: auto;
 
   }
 
   .stats-choice img {
-    width: 50%;
-    height: 95%;
-
+    width: 60%;
   }
 
   .player-view {
-    font-size: 10vh;
+    font-size: 6vh;
+    margin-top: 3vh;
     font-family: 'overwatch';
     font-style: italic;
     display: block;
+  }
+
+  #primary-tag {
+    margin-left: 5vw;
+    display: block;
+  }
+
+  #primary-tag select {
+    background-color: white;
+  }
+
+  #primary-tag button {
+    padding: .2vw;
+    width: 20vw;
+  }
+
+  #compare-player-button {
+    font-size: 2.5vh;
+    width: 30vw;
+    margin-left: -11vw;
+    margin-top: 10vh;
   }
 
 }

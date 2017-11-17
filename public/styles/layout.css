@@ -20,6 +20,8 @@ button {
   height: 3vh;
 }
 
-@media only screen and (max-width: 640px) {
-
-}
+/*@media only screen and (max-width: 640px) {
+  button {
+    width: 20vw;
+  }
+}*/
