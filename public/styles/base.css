@@ -47,13 +47,10 @@ h2 {
 button {
   border-color: #f99e1a;
   border-width: 3px;
-  /*border-style: solid;*/
-  /*padding: 2px;*/
 }
 
 img {
   border-width: 2px;
   border-color: #218ffe;
   border-style: solid;
-  /*box-shadow: 3px 3px 3px 3px black;*/
 }

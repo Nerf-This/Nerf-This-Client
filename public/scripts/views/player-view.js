@@ -30,23 +30,7 @@ var app = app || {};
 
   playerView.initIndexPage = function() {
     console.log('initindexpage triggered');
-
     reset();
-    // $('#player-start').on('click', function (event) {
-    //   console.log('BattleTag Main Search Clicked');
-    //   event.preventDefault();
-    //
-    //   $('.container').hide();
-    //   playerView.initSearchBar();
-    //   $('#secondary-tag').hide();
-    //
-    //   $('#compare-player-button').on('click', function (event) {
-    //     $('#secondary-tag').show();
-    //     $('#compare-player-button').hide();
-    //
-    //   })
-    //
-    // })
     $('.main-start').show();
   }
   playerView.initProfilePage = function() {
@@ -144,8 +128,6 @@ var app = app || {};
     $('#primaryChart').hide();
     $('#solo-stat-buttons').hide();
     $('#compare-detail').empty();
-    // $('#primary-tag').hide();
-    // $('#secondary-tag').hide();
     $('#compare-detail').append(allPlayers[1].toHtml('compare'));
     $('.compare-view').show();
     drawCompareChart(primaryHeroes, primaryHeroHours, secondaryHeroHours);

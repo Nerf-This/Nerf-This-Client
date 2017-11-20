@@ -110,9 +110,6 @@ form select option {
 
 canvas {
   margin-bottom: 3vh;
-  /*margin-left: 1vw;
-  margin-right: 1vw;*/
-  /*max-height: 80vh;*/
 }
 
 .about {
@@ -144,7 +141,6 @@ canvas {
   height: auto;
   margin: 1%;
   margin-top: 0.5%;
-  /*margin-top: 5%;*/
 }
 
 .about a {
