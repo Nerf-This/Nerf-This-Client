@@ -1,10 +1,12 @@
-# Project Name
+# Nerf This
 
 **Author**: Seth Donohue, Kat Cosgrove, Garrett Johnson
 **Version**: 1.12.3
 
 ## Overview
-This application is a website that displays the user's corresponding Battlenet BattleTag's Overwatch stats. It also allows the user to be able to compare themselves against other battlenet users. In the future the goal of the website is to be able to set up teams of players that you can add or delete from. In order to compare current team members and
+This application is a website that displays the user's corresponding Battlenet BattleTag's Overwatch stats. It also allows the user to be able to compare themselves against other battlenet users. In the future the goal of the website is to be able to set up teams of players that you can add or delete from.
+
+## http://nerf-this.herokuapp.com/
 
 ## Architecture
 We utilized jQuery, JSON, HTML, CSS, Javascript, Heroku.
