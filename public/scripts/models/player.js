@@ -48,7 +48,6 @@ let secondaryBlocked = [];
 
   //API call for primary player data
   Player.loadPlayer = function (platform, region, battletag) {
-    console.log('Players battletag', battletag);
     $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data) {
       allPlayers[0] = new Player(data);
       primaryHeroes = Object.keys(allPlayers[0].heroes);
@@ -71,7 +70,6 @@ let secondaryBlocked = [];
 
   //API call for a player to compare against
   Player.comparePlayer = function (platform, region, battletag) {
-    console.log(battletag);
     $.get(`${__API_URL__}/all/${platform}/${region}/${battletag}`, function (data){
       allPlayers[1] = new Player(data);
       secondaryHeroes = Object.keys(allPlayers[1].heroes);
@@ -101,7 +99,6 @@ let secondaryBlocked = [];
       localStorage.playerBattletag = battletag;
       localStorage.playerPlatform = platform;
       localStorage.playerRegion = region;
-      console.log(battletag, region, platform);
 
       Player.loadPlayer(platform, region, battletag);
     })
@@ -116,7 +113,7 @@ let secondaryBlocked = [];
       localStorage.opponentBattletag = battletag;
       localStorage.opponentPlatform = platform;
       localStorage.opponentRegion = region;
-      console.log(platform, region, battletag);
+
       Player.comparePlayer(platform, region, battletag);
     })
   }

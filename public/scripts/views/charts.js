@@ -37,7 +37,8 @@ function drawSingleChart(labels, values) { // eslint-disable-line
             'rgb(131,0,232)',
             'rgb(206,0,255)',
             'rgb(232,0,195)',
-            'rgb(255,0,83)'
+            'rgb(255,0,83)',
+            'rgb(198,0,29)'
           ],
 
           hoverBackgroundColor: [
@@ -126,7 +127,8 @@ function drawCompareChart(labels, primaryValues, secondaryValues) { // eslint-di
             'rgb(131,0,232)',
             'rgb(206,0,255)',
             'rgb(232,0,195)',
-            'rgb(255,0,83)'
+            'rgb(255,0,83)',
+            'rgb(198,0,29)'
           ],
 
           hoverBackgroundColor: [
@@ -180,7 +182,8 @@ function drawCompareChart(labels, primaryValues, secondaryValues) { // eslint-di
             'rgb(222, 184, 252)',
             'rgb(241, 183, 255)',
             'rgb(252, 186, 241)',
-            'rgb(252, 184, 206)'
+            'rgb(252, 184, 206)',
+            'rgb(244, 149, 163)'
           ],
 
           hoverBackgroundColor: [

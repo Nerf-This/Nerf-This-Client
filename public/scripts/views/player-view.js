@@ -6,7 +6,6 @@ var app = app || {};
   const playerView = {};
 
   function reset() {
-    console.log('reset triggered');
     $('.container').hide();
     $('navigation').slideDown(350);
   }
@@ -17,24 +16,20 @@ var app = app || {};
 
     //Check for localStorage, if exists
     if (localStorage.playerBattletag) {
-      console.log('Local Storage ', localStorage.playerBattletag);
       $('#player-battletag').val(localStorage.playerBattletag);
       $('#searchload-player').fadeIn(250);
       app.Player.loadPlayer(localStorage.playerPlatform,localStorage.playerRegion, localStorage.playerBattletag)
     }
     if (localStorage.opponentBattletag) {
-      console.log('Local Storage ', localStorage.opponentBattletag);
       $('#opponent-battletag').val(localStorage.opponentBattletag);
     }
   }
 
   playerView.initIndexPage = function() {
-    console.log('initindexpage triggered');
     reset();
     $('.main-start').show();
   }
   playerView.initProfilePage = function() {
-    console.log('whats going on');
     $('.container').hide();
     playerView.initSearchBar();
     $('#secondary-tag').hide();
@@ -45,12 +40,10 @@ var app = app || {};
     })
   }
   playerView.initAboutPage = function() {
-    console.log('initaboutpage triggered');
     reset();
     $('.about').show();
   }
   playerView.initOpponentPage = function() {
-    console.log('initachievementpage triggered');
     reset();
     $('.achievement-view').show();
     playerView.initSearchBar();
@@ -58,10 +51,6 @@ var app = app || {};
     $('#secondary-tag').show();
   }
 
-  playerView.initTeamPage = function() {
-    reset();
-    $('.team-link').show();
-  }
   playerView.initPlayerPage = function () {
 
     //Append Main Player
@@ -128,6 +117,7 @@ var app = app || {};
     $('#primaryChart').hide();
     $('#solo-stat-buttons').hide();
     $('#compare-detail').empty();
+    $('.search').hide();
     $('#compare-detail').append(allPlayers[1].toHtml('compare'));
     $('.compare-view').show();
     drawCompareChart(primaryHeroes, primaryHeroHours, secondaryHeroHours);
