@@ -79,8 +79,9 @@ form select option {
 }
 
 #compare-detail {
-  float:right;
+  float: right;
   margin-right: 3%;
+  margin-top: 1.5%;
 }
 
 .player-view {
@@ -101,9 +102,9 @@ form select option {
 }
 
 #compare-player-button {
-  width: 15vw;
+  width: 12vw;
   font-size: 3vh;
-  height: 4vh;
+  height: 4.2vh;
   margin-left: -8vw;
   margin-top: 1.2vh;
 }
@@ -342,24 +343,8 @@ a:hover
     margin-top: 1vh;
   }
 
-  .compare-view h2 {
-    text-align: center;
-    font-size: 8vw;
-    margin-top: -4vh;
-  }
-
   .container img, .container h3, .container p {
-    margin-bottom: 2.5vw;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    margin-top: 2.5vw;
-  }
-
-  #player-detail img {
-    margin-bottom: 2.5vw;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    margin-top: 2.5vw;
+    margin: 2.5vw;
   }
 
   .container li img {
@@ -381,10 +366,6 @@ a:hover
     width: 35%;
     height: 15%;
     border-radius: 5vw;
-  }
-
-  #damage-blocked {
-    display: none;
   }
 
   form input {
@@ -417,7 +398,7 @@ a:hover
   #compare-player-button {
     font-size: 2.5vh;
     width: 30vw;
-    margin-top: 10vh;
+    margin-top: 17.2vw;
   }
 
   #solo-stat-buttons button {
